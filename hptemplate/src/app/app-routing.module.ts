@@ -5,13 +5,24 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageoneComponent } from './pageone/pageone.component';
+import { PagetwoComponent } from './pagetwo/pagetwo.component';
+import { PagethreeComponent } from './pagethree/pagethree.component';
+import { PagefourComponent } from './pagefour/pagefour.component';
+
 
 const routes: Routes = [
-{ path: '', component: StartpageComponent },
-{ path: '', component: HeaderComponent },
-{ path: '', component: FooterComponent },
+{ path: '', component: StartpageComponent }, //https://ullrich-tobias.de/
+
 { path: 'Impressum', component: ImpressumComponent },  
-{ path: 'Kontakt', component: ContactComponent },  
+{ path: 'Kontakt', component: ContactComponent }, 
+
+{ path: 'UeberMich', component: PageoneComponent }, 
+{ path: 'cranio-sacral', component: PagetwoComponent },
+{ path: 'Astrologie', component: PagethreeComponent},
+{ path: 'Kurse', component: PagefourComponent },
+// https://ullrich-tobias.de/cranio-sacral/Diplomarbeit
+// https://ullrich-tobias.de/Astrologie/horoskope
 ];
 
 @NgModule({
@@ -19,22 +30,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-
-
-
-//x https://ullrich-tobias.de/
-
-// https://ullrich-tobias.de/UeberMich
-// https://ullrich-tobias.de/cranio-sacral/
-// https://ullrich-tobias.de/cranio-sacral/Diplomarbeit
-// https://ullrich-tobias.de/Astrologie/
-// https://ullrich-tobias.de/Astrologie/horoskope
-// https://ullrich-tobias.de/Kurse
-
-//header
-//footer
-//Startpage
-//x https://ullrich-tobias.de/Kontakt
-//x https://ullrich-tobias.de/impressum

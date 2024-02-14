@@ -8,6 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageoneComponent } from './pageone/pageone.component';
+import { PagetwoComponent } from './pagetwo/pagetwo.component';
+import { PagethreeComponent } from './pagethree/pagethree.component';
+import { PagefourComponent } from './pagefour/pagefour.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     StartpageComponent,
     ImpressumComponent,
-    ContactComponent
+    ContactComponent,
+    PageoneComponent,
+    PagetwoComponent,
+    PagethreeComponent,
+    PagefourComponent
   ],
   imports: [
     BrowserModule,
