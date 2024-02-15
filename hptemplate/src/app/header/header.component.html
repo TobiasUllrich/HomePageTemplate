@@ -1,5 +1,42 @@
-<p>header works!</p>
-<button routerLink="/Impressum">Impressum</button>
-<button routerLink="/Kontakt">Kontakt</button>
-<button routerLink="/">StartPage</button>
-<button routerLink="/cranio-sacral/Diplomarbeit">PageOne</button>
+<header> <!--Semantisches HTML-Tag-->
+
+
+    <div class="header-socialmedia">
+       <img *ngFor="let logo of logos" src="assets/img/{{ logo }}.png" (click)="goToUrl()">
+    </div>
+
+    <div class="header-links">
+        <nav routerLink="/Astrologie">
+            <span>astr</span>
+        </nav>
+
+        <nav routerLink="/Cranio-Sacral">
+            <span>cran</span>
+        </nav>
+
+        <nav routerLink="/Kurse">
+            <span>kur</span>
+        </nav>
+    
+        <nav routerLink="/">
+            <img src="assets/img/logo.jpg">
+        </nav>
+    
+        <nav routerLink="/UeberMich">
+            <span>UebM</span>
+        </nav>   
+
+        <nav routerLink="/Kontakt">
+            <span>Kontakt</span>
+        </nav>
+
+        <nav routerLink="/Impressum">
+            <span>Impressum</span>
+        </nav>        
+    </div>
+
+    <div class="header-dontknow">
+        <div>dn1</div>
+    </div>
+
+</header>

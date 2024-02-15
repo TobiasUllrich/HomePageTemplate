@@ -18,8 +18,8 @@ const routes: Routes = [
 { path: 'Kontakt', component: ContactComponent }, 
 
 { path: 'UeberMich', component: PageoneComponent }, 
-{ path: 'cranio-sacral', component: PagetwoComponent },
-{ path: 'Astrologie', component: PagethreeComponent},
+{ path: 'Astrologie', component: PagetwoComponent },
+{ path: 'Cranio-Sacral', component: PagethreeComponent},
 { path: 'Kurse', component: PagefourComponent },
 // https://ullrich-tobias.de/cranio-sacral/Diplomarbeit
 // https://ullrich-tobias.de/Astrologie/horoskope

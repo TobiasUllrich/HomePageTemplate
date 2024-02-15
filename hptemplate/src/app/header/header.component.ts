@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+
+ logos: string[] =[
+ 'youtube',
+ 'instagram',
+ 'facebook',
+ 'twitter',
+ 'tik-tok'
+]; 
+links: string[] =[
+  'youtube',
+  'instagram',
+  'facebook',
+  'twitter',
+  'tik-tok'
+ ]; 
+
+ goToUrl(){
+  document.location.href = 'https://stackoverflow.com';
+ }
+
+
 }
