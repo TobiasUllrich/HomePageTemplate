@@ -1,0 +1,30 @@
+:host{
+    font-size: 18px;
+    font-weight: bold;   /* equals 700 */
+}
+
+.header-links{
+    background-color: red;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100px;
+}
+
+.header-links nav{
+display:flex;
+align-items:center;
+margin:10px;
+height:65%;
+}
+
+.header-links img{
+    height:100%;
+}
+
+.header-links nav:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+    font-weight: 1000;
+}

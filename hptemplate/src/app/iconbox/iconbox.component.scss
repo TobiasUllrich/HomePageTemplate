@@ -1,0 +1,22 @@
+:host{
+    height:100px;
+}
+
+.header-socialmedia{
+    background-color: green;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100%;
+}
+
+img{
+    height:35%;
+    margin:10px;
+}
+
+img:hover{
+    cursor:pointer;
+    transform: scale(1.2);
+    transition: transform 330ms ease-in-out;
+}

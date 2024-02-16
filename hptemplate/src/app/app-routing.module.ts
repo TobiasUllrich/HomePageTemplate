@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StartpageComponent } from './startpage/startpage.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageoneComponent } from './pageone/pageone.component';
@@ -16,11 +14,11 @@ const routes: Routes = [
 
 { path: 'Impressum', component: ImpressumComponent },  
 { path: 'Kontakt', component: ContactComponent }, 
+{ path: 'UeberMich', component: PagefourComponent }, 
 
-{ path: 'UeberMich', component: PageoneComponent }, 
-{ path: 'Astrologie', component: PagetwoComponent },
-{ path: 'Cranio-Sacral', component: PagethreeComponent},
-{ path: 'Kurse', component: PagefourComponent },
+{ path: 'Astrologie', component: PageoneComponent },
+{ path: 'Cranio-Sacral', component: PagetwoComponent},
+{ path: 'Kurse', component: PagethreeComponent },
 // https://ullrich-tobias.de/cranio-sacral/Diplomarbeit
 // https://ullrich-tobias.de/Astrologie/horoskope
 ];

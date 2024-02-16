@@ -1,0 +1,12 @@
+<div class="header-links">
+
+    <nav *ngFor="let route of routes; let i = index" routerLink="{{ route }}">
+        <ng-container *ngIf="i!==indexOfPositionOfLogo">
+        <span>{{ display[i]}}</span>
+        </ng-container>
+        <ng-container *ngIf="i==indexOfPositionOfLogo">
+            <img  src="assets/img/logo.jpg" href="/">
+        </ng-container>
+    </nav>
+
+</div>

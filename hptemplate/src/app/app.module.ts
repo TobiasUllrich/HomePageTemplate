@@ -12,6 +12,8 @@ import { PageoneComponent } from './pageone/pageone.component';
 import { PagetwoComponent } from './pagetwo/pagetwo.component';
 import { PagethreeComponent } from './pagethree/pagethree.component';
 import { PagefourComponent } from './pagefour/pagefour.component';
+import { IconboxComponent } from './iconbox/iconbox.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PagefourComponent } from './pagefour/pagefour.component';
     PageoneComponent,
     PagetwoComponent,
     PagethreeComponent,
-    PagefourComponent
+    PagefourComponent,
+    IconboxComponent,
+    NavmenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,52 @@
-<p>startpage works!</p>
+
+<main>
+
+    <!-- <div style="background-color: green; display:flex;">
+        <img  src="assets/img/logo.jpg" href="/">
+        <div style="display:flex;flex-direction:column;">
+            <h1>Tobias Ullrich</h1>
+            <h1>Best Online Kurse on the market</h1>
+        </div>
+
+    </div>
+
+    <div style="background-color: green; display:flex;">
+        <img  src="assets/img/kurse-main.jpg" href="/">
+        <div style="display:flex;flex-direction:column;">
+            <h2>Best Online Kurse on the market</h2>
+            <span>"Das Entscheidende am Wissen ist, dass man es beherzigt und anwendet." - Konfuzius</span>
+        </div>
+
+    </div>
+
+    <div style="background-color: blue; display:flex;">
+        <img  src="assets/img/cranio-main.jpg" href="/">
+        <div style="display:flex;flex-direction:column;">
+            <h2>cranio-sacral</h2>
+            <span>"Wenn du den Mechanismus verstehst, ist die Behandlung einfach." - W. G. Sutherland</span>
+        </div>
+
+    </div>
+    
+    <div style="background-color: yellow; display:flex;">
+        <img  src="assets/img/astro-main.jpg" href="/">
+        <div style="display:flex;flex-direction:column;">
+            <h2>astro</h2>
+            <span>"Astrologie ist eine Sprache. Wenn du diese Sprache verstehst spricht der Himmel zu dir." - Dane Rudhyar</span>
+        </div>
+    </div> -->
+    
+
+    <div style="background-color: green; display:flex; flex-direction: column;">
+        <ng-container *ngFor="let picture of pictures; let i = index">
+            <div style="display:flex;">
+            <img src="assets/img/{{ picture }}.jpg">
+        <div style="display:flex;flex-direction:column;">
+            <h2>{{ caption[i] }}</h2>
+            <span>{{ text[i] }}</span>
+        </div>
+    </div>
+        </ng-container>
+    </div>
+
+</main>

@@ -1,0 +1,10 @@
+.box{
+    height:100px;
+    width:100px;
+    background-color: aqua;
+}
+.btn {
+    &:hover + .box {
+        transform: scale(3, 0.5);
+    }
+  }

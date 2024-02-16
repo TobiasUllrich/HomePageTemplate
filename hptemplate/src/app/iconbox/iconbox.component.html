@@ -1,0 +1,3 @@
+<div class="header-socialmedia">
+    <img *ngFor="let logo of logos; let i = index" src="assets/img/{{ logo }}.png" (click)="goToUrl(i);">
+</div>
