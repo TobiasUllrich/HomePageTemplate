@@ -13,6 +13,16 @@
 .routerDesign{
     background-color: lightpink;
     display:flex;  //Erst jetzt bekommen alle Komponenten die vom router-outlet angesteuert werden Farbe
+    flex:6;
     min-height: calc(100vh - 100px - 100px); //Nimmt immer mindestens den Rest-Raum ein, der abzüglich von header & footer noch übrig bleibt
 }
 
+.sideBoxLeft{
+    background-color: red;
+    flex:2;
+}
+
+.sideBoxRight{
+    background-color: blue;
+    flex:2;
+}
