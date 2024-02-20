@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class StartpageComponent {
 
   pictures: string[] =[
-    'logo',
+    'Tobias-Ullrich',
     'kurse-main',
     'cranio-main',
     'astro-main'

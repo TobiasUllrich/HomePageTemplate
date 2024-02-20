@@ -1,4 +1,12 @@
 :host {
     background-color: lightskyblue;
-    height:300px;
+}
+
+.Impressum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 48px;
 }
