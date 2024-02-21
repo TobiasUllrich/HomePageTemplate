@@ -14,7 +14,9 @@ export class NavmenuComponent {
     '/',
     '/UeberMich',
     '/Kontakt',
-    "/Impressum"
+    '/Impressum',
+    '/Astrologie/Horoskope',
+    '/Cranio-Sacral/Diplomarbeit',
    ];
 
   display: string[] =[
@@ -24,7 +26,9 @@ export class NavmenuComponent {
     '',
     'Über Mich',
     'Kontakt',
-    'Impressum'
+    'Impressum',
+    'Horoskope',
+    'Diplomarbeit',
    ];
 
   indexOfPositionOfLogo: number = 3; //Ändern wenn das Logo anders positioniert werden soll  

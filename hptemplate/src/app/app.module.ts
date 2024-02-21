@@ -16,6 +16,7 @@ import { IconboxComponent } from './iconbox/iconbox.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { PagefiveComponent } from './pagefive/pagefive.component';
 import { PagesixComponent } from './pagesix/pagesix.component';
+import { PagesevenComponent } from './pageseven/pageseven.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PagesixComponent } from './pagesix/pagesix.component';
     IconboxComponent,
     NavmenuComponent,
     PagefiveComponent,
-    PagesixComponent
+    PagesixComponent,
+    PagesevenComponent
   ],
   imports: [
     BrowserModule,

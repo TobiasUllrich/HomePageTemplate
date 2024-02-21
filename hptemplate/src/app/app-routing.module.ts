@@ -9,6 +9,7 @@ import { PagethreeComponent } from './pagethree/pagethree.component';
 import { PagefourComponent } from './pagefour/pagefour.component';
 import { PagefiveComponent } from './pagefive/pagefive.component';
 import { PagesixComponent } from './pagesix/pagesix.component';
+import { PagesevenComponent } from './pageseven/pageseven.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
 
 { path: 'Astrologie/Horoskope', component: PagefiveComponent },
 { path: 'Cranio-Sacral/Diplomarbeit', component: PagesixComponent },
+{ path: 'Kurse/Kursinhalte', component: PagesevenComponent },
 ];
 
 @NgModule({
