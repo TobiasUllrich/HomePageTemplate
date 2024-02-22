@@ -2,9 +2,14 @@
 
     <nav *ngFor="let route of routes; let i = index" routerLink="{{ route }}">
         <ng-container *ngIf="i!==indexOfPositionOfLogo">
-        <span>{{ display[i]}}</span>
+          <span>{{ display[i]}}</span>
+          
+          <div style="position:relative;">
+            <div class="klappMenu">fghfghgfh</div>
+          </div>
+          
         </ng-container>
-        <ng-container *ngIf="i==indexOfPositionOfLogo">
+        <ng-container *ngIf="i==indexOfPositionOfLogo"> <!-- Logo statt Wert aus dem Array -->
             <img  src="assets/img/logo.jpg" href="/">
         </ng-container>
     </nav>

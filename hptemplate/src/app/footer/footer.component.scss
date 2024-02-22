@@ -6,9 +6,14 @@
 footer{
     background-color: aqua;
     display:flex;
-    flex-direction:column;
-    align-items: center;
+    justify-content:space-between;
+    //flex-direction:column;
+    //align-items: center;
     height:100px;
+}
+
+nav{
+    cursor:pointer;
 }
 
 h1{

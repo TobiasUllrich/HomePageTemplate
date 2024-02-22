@@ -29,3 +29,12 @@ height:65%;
     transition: transform 330ms ease-in-out;
     font-weight: 1000;
 }
+
+.klappmenu{
+    position:absolute;
+    background-color: green;
+    width:50px;
+    height:20px;
+    bottom:-20px;
+    z-index:3;
+}

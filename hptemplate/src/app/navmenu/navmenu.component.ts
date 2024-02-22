@@ -13,10 +13,8 @@ export class NavmenuComponent {
     '/Kurse',
     '/',
     '/UeberMich',
-    '/Kontakt',
-    '/Impressum',
     '/Astrologie/Horoskope',
-    '/Cranio-Sacral/Diplomarbeit',
+    '/Kontakt',
    ];
 
   display: string[] =[
@@ -25,12 +23,30 @@ export class NavmenuComponent {
     'Kurse',
     '',
     'Über Mich',
+    'Meine Arbeit',
     'Kontakt',
-    'Impressum',
+   ];
+
+  indexOfPositionOfLogo: number = 3; //Ändern wenn das Logo anders positioniert werden soll  
+
+  subMenuRoutes: string[] =[
+    '/Kurse/Kursinhalte',
+    '/Astrologie/Horoskope',
+    '/Cranio-Sacral/Diplomarbeit',
+   ];
+
+  subMenuDisplay: string[] =[
+    'Kursinhalte',
     'Horoskope',
     'Diplomarbeit',
    ];
 
-  indexOfPositionOfLogo: number = 3; //Ändern wenn das Logo anders positioniert werden soll  
+   correspondingMainRoute: string[] =[
+    '/Astrologie',
+    '/Cranio-Sacral',
+    '/Kurse',
+   ];
+
+
 
 }
