@@ -48,5 +48,9 @@ export class NavmenuComponent {
    ];
 
 
+   showSubMenu(id: number){
+    console.log('gehovert ' + id);
+    (<HTMLInputElement>document.getElementById(id.toString())).classList.remove('d-none');
+   }
 
 }

@@ -3,9 +3,9 @@
     <nav *ngFor="let route of routes; let i = index" routerLink="{{ route }}">
         <ng-container *ngIf="i!==indexOfPositionOfLogo">
           
-          <div style="position:relative;">
+          <div style="position:relative" (mouseenter)="showSubMenu(i)">
             <span>{{ display[i]}}</span>
-            <div class="klappMenu">fghfghgfh</div>
+            <div id="{{i}}" class="klappMenu d-none">testtext</div>
           </div>
           
         </ng-container>
