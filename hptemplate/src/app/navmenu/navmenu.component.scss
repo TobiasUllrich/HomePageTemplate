@@ -18,6 +18,10 @@ margin:10px;
 height:65%;
 }
 
+.header-links nav::before{
+    content: "ggggg";
+}
+
 .header-links img{
     cursor:pointer;
     height:100%;
