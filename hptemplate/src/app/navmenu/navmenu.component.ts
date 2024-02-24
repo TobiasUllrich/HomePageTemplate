@@ -103,17 +103,19 @@ export class NavmenuComponent {
    }
 
 
-   @HostListener('document:mouseenter', ['$event'])
+   @HostListener('document:mouseover', ['$event'])
     onDocumentClick(event: MouseEvent) {
     let elementId: string = (event.target as Element).id;
     console.log('id: ',elementId);
-    console.log('id erste 4:', elementId.substring(1,4));
-    console.log('id nach 5:', elementId.substring(5,elementId.length));
+    console.log('id erste 4:', elementId.substring(0,4));
+    console.log('id nach 5:', elementId.substring(4,elementId.length));
 
-    if(elementId.substring(1,4) == 'main'){
-      console.log(event.target);
-      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(5,elementId.length))).classList.remove('d-none');
+    if(elementId.substring(0,4) == 'main' && (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')).innerHTML !== '&nbsp;&nbsp;'){
+      console.log((<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')));
+      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')).classList.remove('d-none');
 
+      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'2')).classList.remove('d-none');
+      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'3')).classList.remove('d-none');
       //this.closeVideo();
       // (<HTMLInputElement>document.getElementById('s1')).classList.remove('d-none');
       

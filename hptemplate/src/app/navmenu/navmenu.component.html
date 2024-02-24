@@ -3,7 +3,7 @@
   <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav">
 
       <ng-container *ngIf="i!==indexOfPositionOfLogo">
-        <div class="main-box" (mouseenter)="ausklappen('sub'+i)" (mouseleave)="einklappen('sub'+i)">
+        <div class="main-box">
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
           <span id="{{'main' + i}}" class="menu-point-to-hover" routerLink="{{ route }}">
             {{ display[i]}}
@@ -13,7 +13,9 @@
          <!--Untermenupunkte-->
          <div id="{{i}}" class="menu-subpoints">
           <!-- Jedes Array und das zugehörige Display-Array hier einfügen, dann wird immer mit der id des Main Menus gematcht-->
-             <nav id="{{'sub' + i}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes1[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay1[i] }}</nav>
+             <nav id="{{'sub' + i + '1'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes1[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay1[i] }}</nav>
+             <nav id="{{'sub' + i + '2'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes2[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay2[i] }}</nav>
+             <nav id="{{'sub' + i + '3'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes3[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay3[i] }}</nav>
          </div>
          <!--Untermenupunkte-->
         </div>
