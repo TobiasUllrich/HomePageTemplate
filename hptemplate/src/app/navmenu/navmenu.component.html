@@ -11,18 +11,18 @@
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
 
          <!--Untermenupunkte-->
-         <div id="{{i}}" class="menu-subpoints">
-          <!-- Jedes Array und das zugehörige Display-Array hier einfügen, dann wird immer mit der id des Main Menus gematcht-->
-             <nav id="{{'sub' + i + '1'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes1[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay1[i] }}</nav>
-             <nav id="{{'sub' + i + '2'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes2[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay2[i] }}</nav>
-             <nav id="{{'sub' + i + '3'}}" class="subpointStyle d-none" routerLink="{{ subMenuRoutes3[i] }}"> &nbsp;&nbsp; {{ subMenuDisplay3[i] }}</nav>
+         <div id="{{i}}" class="menu-subpoints d-none">
+          <!-- Jedes Array und das zugehörige Display-Array (Untermenü Ebene 1,2, ... 3) hier einfügen, dann wird immer mit der id des Main Menus gematcht -->
+             <nav id="{{'sub' + i + '1'}}" class="subpointStyle" routerLink="{{ subMenuRoutes1[i] }}"> {{ subMenuDisplay1[i] }} </nav>
+             <nav id="{{'sub' + i + '2'}}" class="subpointStyle" routerLink="{{ subMenuRoutes2[i] }}"> {{ subMenuDisplay2[i] }} </nav>
+             <nav id="{{'sub' + i + '3'}}" class="subpointStyle" routerLink="{{ subMenuRoutes3[i] }}"> {{ subMenuDisplay3[i] }} </nav>
          </div>
          <!--Untermenupunkte-->
         </div>
       </ng-container>
 
       <ng-container *ngIf="i==indexOfPositionOfLogo"> <!-- Logo statt Wert aus dem Array -->
-          <img src="assets/img/logo.jpg" href="/" routerLink="{{ route }}">
+          <img class="header-logo" src="assets/img/logo.png" href="/" routerLink="{{ route }}">
       </ng-container>
 
   </nav>

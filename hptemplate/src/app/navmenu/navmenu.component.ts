@@ -1,5 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navmenu',
@@ -90,39 +89,30 @@ export class NavmenuComponent {
     '',
    ];
 
-   ausklappen(id: string){
-    console.log('ausklappen ' + id);
-    // (<HTMLInputElement>document.getElementById(id.toString())).classList.add('klappaus');
-    (<HTMLInputElement>document.getElementById(id.toString())).classList.remove('d-none');
-   }
+   saveHoveredMain: string = '';
 
-    einklappen(id: string){
-      console.log('einklappen ' + id);
-    // (<HTMLInputElement>document.getElementById(id.toString())).classList.remove('klappaus');
-    (<HTMLInputElement>document.getElementById(id.toString())).classList.add('d-none');
-   }
 
 
    @HostListener('document:mouseover', ['$event'])
-    onDocumentClick(event: MouseEvent) {
+    onDocumentHover(event: MouseEvent) {
     let elementId: string = (event.target as Element).id;
-    console.log('id: ',elementId);
-    console.log('id erste 4:', elementId.substring(0,4));
-    console.log('id nach 5:', elementId.substring(4,elementId.length));
+    //console.log('id: ',elementId); //Id des Elements, z.B. 'main1'
+    //console.log('id erste 4:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
+    //console.log('id nach 5:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
 
-    if(elementId.substring(0,4) == 'main' && (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')).innerHTML !== '&nbsp;&nbsp;'){
-      console.log((<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')));
-      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'1')).classList.remove('d-none');
-
-      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'2')).classList.remove('d-none');
-      (<HTMLInputElement>document.getElementById('sub'+elementId.substring(4,elementId.length)+'3')).classList.remove('d-none');
-      //this.closeVideo();
-      // (<HTMLInputElement>document.getElementById('s1')).classList.remove('d-none');
-      
-      }
+    //Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü sichtbar
+    if(elementId.substring(0,4) == 'main'){
+      this.saveHoveredMain =  elementId;
+      (<HTMLInputElement>document.getElementById(elementId.substring(4,elementId.length))).classList.remove('d-none');
+    }
+    //Wenn ein HTML-Element gehovert wird, das keine ID besitzt, dann verstecke das zum vorherig gehoverten Main-Menü zugehörige Untermenü wieder
+    if(elementId == '' && this.saveHoveredMain !==  ''){
+        let idOfTheSubMenu = this.saveHoveredMain.substring(4,this.saveHoveredMain.length);
+        (<HTMLInputElement>document.getElementById(idOfTheSubMenu)).classList.add('d-none');
+        this.saveHoveredMain =  '';
+    }
    }
    
-
 
 
 }
