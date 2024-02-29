@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
 
 @Component({
@@ -14,6 +15,8 @@ export class ContactboxComponent implements OnInit{
     @ViewChild('sendbutton') sendbutton!: ElementRef; //To contact #sendbutton of the HTML-Code
     constructor() { }
   
+  
+
     ngOnInit(): void {
     }
   
@@ -40,9 +43,9 @@ export class ContactboxComponent implements OnInit{
       fd.append('name',nameField.value); //(Variable,Value) Value of variable name is send with the fromdata
       fd.append('email',emailField.value); //(Variable,Value) Value of variable email is send with the fromdata
       fd.append('message',messageField.value); //(Variable,Value) Value of variable message is send with the fromdata
-  
+      
       // Path to the PHP-Data on the FTP-Server -> PHP gets executed when "submit" gets pressed
-      await fetch('https://ullrich-tobias.com/send_mail/send_mail.php',
+      await fetch(`${environment.baseUrl}/send_mail/send_mail.php`,
       {
        method: 'POST', //We want to post something = Post-Request
        body: fd //We fetch our data from the Body (fd = fetch data)
@@ -161,8 +164,17 @@ export class ContactboxComponent implements OnInit{
   displayEverthingOKMessage(name: string){
       (<HTMLInputElement>document.getElementById(`${name}req`)).textContent=`.`;
       (<HTMLInputElement>document.getElementById(`${name}req`)).style.color='white';
-      (<HTMLInputElement>document.getElementById(`${name}ok`)).classList.remove('d-none');
-      (<HTMLInputElement>document.getElementById(`${name}alert`)).classList.add('d-none');
+      
+      
+      
+      //PROBLEM HIER WEIL ER DIE ELEMENTE NICHT FINDET
+      console.log(`${name}ok`);
+      // (<HTMLInputElement>document.getElementById(`${name}ok`)).classList.remove('d-none');
+      // (<HTMLInputElement>document.getElementById(`${name}alert`)).classList.add('d-none');
+      console.log((<HTMLInputElement>document.getElementById(`${name}ok`)));  //<------ IST NULL
+      console.log((<HTMLInputElement>document.getElementById(`${name}alert`)));  //<------ IST NULL   
+      
+      
   }
   
 }
