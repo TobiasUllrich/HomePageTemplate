@@ -36,7 +36,7 @@ export class ContactboxComponent implements OnInit{
       //Sende-Animation anzeigen
   
       //Which data will be send?
-      let fd = new FormData(); //fd = FormDate
+      let fd = new FormData(); //fd = FormData
       fd.append('name',nameField.value); //(Variable,Value) Value of variable name is send with the fromdata
       fd.append('email',emailField.value); //(Variable,Value) Value of variable email is send with the fromdata
       fd.append('message',messageField.value); //(Variable,Value) Value of variable message is send with the fromdata
