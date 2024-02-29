@@ -1,0 +1,67 @@
+<div class="contact-center">
+
+    <div id="contact" class="contact-container">
+    
+    <h1>Contact</h1>
+    
+    <div class="contact-textandform">
+    
+      <div class="contact-text">
+        <h2>Got a problem to solve?</h2>
+        <span class="contact-text-description">Contact me through this form, I am interested in hearing you,
+         knowing your ideas and contributing to your projects with my work.
+        </span><br>
+        <span class="contact-contactme">Need a Frontend developer? <b>Contact me!</b></span>
+      </div>
+    
+           <!-- #myForm um das Formular anzusprechen-->
+           <!-- "name" & "message" sind die Variablen welche an den FTP-Server gesendet werden-->
+           <!-- FormsModule & ReactiveFormsModule in app.module.ts hinzufügen -->
+           <!-- ngNativeValidate hinzufügen, sonst funktioniert required nicht -->
+             <form id="formular" class="contact-form" (submit)="sendMail()" ngNativeValidate #myForm>
+              <div class="input-group"> 
+                  <input class="name" required type="text" placeholder="" name="name" (input)="onChange('name')" (focus)="shiftLabelUpwards('name')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('name')" #nameField>
+                  <label id="name-label" class="label-name">Your name</label>
+              </div>
+                <span id="namereq">
+                  .
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                  <img id="namealert" class="alert0 d-none" src="assets/images/alert.png">
+                  <img id="nameok" class="alert0 d-none" src="assets/images/ok.png">
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                </span>
+                <div class="input-group">
+                  <input class="email" required type="email" placeholder="" (input)="onChange('email')" (focus)="shiftLabelUpwards('email')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('email')" #emailField>
+                  <label id="email-label" class="label-email">Your email</label>
+                </div>
+                <span id="emailreq">
+                  .
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                  <img id="emailalert" class="alert1 d-none" src="assets/images/alert.png">
+                  <img id="emailok" class="alert1 d-none" src="assets/images/ok.png">
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                </span>
+                <div class="input-group">
+                  <textarea class="text" required type="text" placeholder="" name="message" (input)="onChange('message')" (focus)="shiftLabelUpwards('message')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('message')" #messageField></textarea>
+                  <label id="message-label" class="label-message">Your message</label>
+                </div>
+                <span id="messagereq">
+                  .
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                  <img id="messagealert" class="alert2 d-none" src="assets/images/alert.png">
+                  <img id="messageok" class="alert2 d-none" src="assets/images/ok.png">       
+                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                </span>
+                <button type="submit" #sendbutton>Say hello :)</button>
+    
+             </form>
+    
+    
+          <!-- For Successfully-Send-Animation -->
+          <div id="divForSendAnimation">Message send</div>
+          
+    </div>
+    
+    </div>
+    
+    </div>

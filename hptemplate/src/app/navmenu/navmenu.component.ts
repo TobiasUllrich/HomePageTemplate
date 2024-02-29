@@ -97,8 +97,8 @@ export class NavmenuComponent {
     onDocumentHover(event: MouseEvent) {
     let elementId: string = (event.target as Element).id;
     //console.log('id: ',elementId); //Id des Elements, z.B. 'main1'
-    //console.log('id erste 4:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
-    //console.log('id nach 5:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
+    //console.log('id erste 4 Stellen:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
+    //console.log('id nach ab 5ter Stelle:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
 
     //Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü sichtbar
     if(elementId.substring(0,4) == 'main'){

@@ -17,6 +17,7 @@ import { NavmenuComponent } from './navmenu/navmenu.component';
 import { PagefiveComponent } from './pagefive/pagefive.component';
 import { PagesixComponent } from './pagesix/pagesix.component';
 import { PagesevenComponent } from './pageseven/pageseven.component';
+import { ContactboxComponent } from './contactbox/contactbox.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PagesevenComponent } from './pageseven/pageseven.component';
     NavmenuComponent,
     PagefiveComponent,
     PagesixComponent,
-    PagesevenComponent
+    PagesevenComponent,
+    ContactboxComponent
   ],
   imports: [
     BrowserModule,
