@@ -153,7 +153,7 @@ export class ContactboxComponent implements OnInit{
     (<HTMLInputElement>document.getElementById(`${name}req`)).textContent=`Your ${name} is required`;
     if(name == 'message'){(<HTMLInputElement>document.getElementById(`messagereq`)).textContent=`Your message is empty`}; //Overwrite textContent if message-Element
     (<HTMLInputElement>document.getElementById(`${name}req`)).style.color='red';
-    (<HTMLInputElement>document.getElementById(`${name}ok`)).classList.add('d-none');
+    //(<HTMLInputElement>document.getElementById(`${name}ok`)).classList.add('d-none'); //Grüne Haken ausgeblendet
     (<HTMLInputElement>document.getElementById(`${name}alert`)).classList.remove('d-none');
   }
   
@@ -164,17 +164,8 @@ export class ContactboxComponent implements OnInit{
   displayEverthingOKMessage(name: string){
       (<HTMLInputElement>document.getElementById(`${name}req`)).textContent=`.`;
       (<HTMLInputElement>document.getElementById(`${name}req`)).style.color='white';
-      
-      
-      
-      //PROBLEM HIER WEIL ER DIE ELEMENTE NICHT FINDET
-      console.log(`${name}ok`);
-      // (<HTMLInputElement>document.getElementById(`${name}ok`)).classList.remove('d-none');
-      // (<HTMLInputElement>document.getElementById(`${name}alert`)).classList.add('d-none');
-      console.log((<HTMLInputElement>document.getElementById(`${name}ok`)));  //<------ IST NULL
-      console.log((<HTMLInputElement>document.getElementById(`${name}alert`)));  //<------ IST NULL   
-      
-      
+      //(<HTMLInputElement>document.getElementById(`${name}ok`)).classList.remove('d-none'); //Grüne Haken ausgeblendet
+      (<HTMLInputElement>document.getElementById(`${name}alert`)).classList.add('d-none');
   }
   
 }

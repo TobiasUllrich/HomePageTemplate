@@ -25,37 +25,38 @@
               </div>
                 <span id="namereq">
                   .
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
-                  <img id="namealert" class="alert0 d-none" src="assets/img/alert.png">
-                  <img id="nameok" class="alert0 d-none" src="assets/img/ok.png">
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 </span>
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                <img id="namealert" class="alert0 d-none" src="assets/img/alert.png">
+                <img id="nameok" class="alert0 d-none" src="assets/img/ok.png">
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 <div class="input-group">
                   <input class="email" required type="email" placeholder="" name="email" (input)="onChange('email')" (focus)="shiftLabelUpwards('email')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('email')" #emailField>
                   <label id="email-label" class="label-email">Your email</label>
                 </div>
                 <span id="emailreq">
                   .
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
-                  <img id="emailalert" class="alert1 d-none" src="assets/img/alert.png">
-                  <img id="emailok" class="alert1 d-none" src="assets/img/ok.png">
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 </span>
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                <img id="emailalert" class="alert1 d-none" src="assets/img/alert.png">
+                <img id="emailok" class="alert1 d-none" src="assets/img/ok.png">
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 <div class="input-group">
                   <textarea class="text" required type="text" placeholder="" name="message" (input)="onChange('message')" (focus)="shiftLabelUpwards('message')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('message')" #messageField></textarea>
                   <label id="message-label" class="label-message">Your message</label>
                 </div>
                 <span id="messagereq">
                   .
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
-                  <img id="messagealert" class="alert2 d-none" src="assets/img/alert.png">
-                  <img id="messageok" class="alert2 d-none" src="assets/img/ok.png">       
-                  <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 </span>
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+                <img id="messagealert" class="alert2 d-none" src="assets/img/alert.png">
+                <img id="messageok" class="alert2 d-none" src="assets/img/ok.png">       
+                <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
+
                 <button type="submit" #sendbutton>Say hello :)</button>
     
              </form>
-    
+ 
     
           <!-- For Successfully-Send-Animation -->
           <div id="divForSendAnimation">Message send</div>
