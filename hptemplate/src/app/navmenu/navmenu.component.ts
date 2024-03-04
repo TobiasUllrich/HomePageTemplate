@@ -89,7 +89,7 @@ export class NavmenuComponent {
     '',
    ];
 
-   saveHoveredMain: string = '';
+   
 
 
 
@@ -100,32 +100,24 @@ export class NavmenuComponent {
     //console.log('id erste 4 Stellen:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
     //console.log('id nach ab 5ter Stelle:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
 
-    //Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü sichtbar
+    //Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü (hat die id=4, wenn main4 gehovert wird) sichtbar
     if(elementId.substring(0,4) == 'main'){
-      this.saveHoveredMain =  elementId;
-      (<HTMLInputElement>document.getElementById(elementId.substring(4,elementId.length))).classList.remove('d-none');
+     
+      //Prüfe das Array mit den Menü-Punkten
+      for(let i=0;i<this.routes.length;i++){
+        //Entferne 'd-none'-Klasse beim zugehörigen Untermenü 
+        if(elementId.substring(4,elementId.length)==i.toString()){
+          (<HTMLInputElement>document.getElementById(elementId.substring(4,elementId.length))).classList.remove('d-none');
+        }
+        else{
+          //Füge bei allen anderen Untermenüs die 'd-none'-Klasse hinzu, AUßER beim Menüpunkt mit dem Logo ('indexOfPositionOfLogo')
+          if (i != this.indexOfPositionOfLogo){(<HTMLInputElement>document.getElementById(i.toString())).classList.add('d-none')};
+        }
+      };
+      
     }
-    //Wenn ein HTML-Element gehovert wird, das keine ID besitzt, dann verstecke das zum vorherig gehoverten Main-Menü zugehörige Untermenü wieder
-    if(elementId == '' && this.saveHoveredMain !==  ''){
-        let idOfTheSubMenu = this.saveHoveredMain.substring(4,this.saveHoveredMain.length);
-        (<HTMLInputElement>document.getElementById(idOfTheSubMenu)).classList.add('d-none');
-        this.saveHoveredMain =  '';
-    }
+
    }
    
-
-  //  @HostListener('document:mouseout', ['$event'])
-  //  onDocumentNotHover(event: MouseEvent) {
-  //  let elementId: string = (event.target as Element).id;
-  //  //console.log('id: ',elementId); //Id des Elements, z.B. 'main1'
-  //  //console.log('id erste 4 Stellen:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
-  //  //console.log('id nach ab 5ter Stelle:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
-
-  //  //Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü sichtbar
-  //  if(elementId.substring(0,4) == 'main'){
-  //    (<HTMLInputElement>document.getElementById(elementId.substring(4,elementId.length))).classList.add('d-none');
-  //  }
-  // }
-
 
 }

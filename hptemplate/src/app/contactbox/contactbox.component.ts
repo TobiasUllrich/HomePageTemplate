@@ -15,7 +15,15 @@ export class ContactboxComponent implements OnInit{
     @ViewChild('sendbutton') sendbutton!: ElementRef; //To contact #sendbutton of the HTML-Code
     constructor() { }
   
-  
+
+    /**
+     * For the cusomized Button
+     */
+    label = 'brrrrrrrZZZ';
+    link = '';
+    where = '';
+    
+
 
     ngOnInit(): void {
     }

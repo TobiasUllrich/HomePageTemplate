@@ -18,6 +18,7 @@ import { PagefiveComponent } from './pagefive/pagefive.component';
 import { PagesixComponent } from './pagesix/pagesix.component';
 import { PagesevenComponent } from './pageseven/pageseven.component';
 import { ContactboxComponent } from './contactbox/contactbox.component';
+import { CustombuttonComponent } from './custombutton/custombutton.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ContactboxComponent } from './contactbox/contactbox.component';
     PagefiveComponent,
     PagesixComponent,
     PagesevenComponent,
-    ContactboxComponent
+    ContactboxComponent,
+    CustombuttonComponent
   ],
   imports: [
     BrowserModule,
