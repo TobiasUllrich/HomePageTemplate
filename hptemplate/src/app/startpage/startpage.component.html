@@ -1,11 +1,11 @@
 
 <main>
 
-    <div style="background-color: green; display:flex; flex-direction: column;">
+    <div style="display:flex;flex-direction:column;">
         <ng-container *ngFor="let picture of pictures; let i = index">
 
            <!-- Um beim ersten Element des Arrays das Bild Rechts zu haben -->
-           <div *ngIf="i == 0" style="display:flex;flex-direction: row-reverse;">
+           <div *ngIf="i == 0" style="display:flex;flex-direction:row-reverse;">
              <img src="assets/img/{{ picture }}.jpg">
              <div style="display:flex;flex-direction:column;">
                <h2>{{ caption[i] }}</h2>

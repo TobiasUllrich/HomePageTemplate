@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navmenu',
@@ -90,7 +90,7 @@ export class NavmenuComponent {
    ];
 
    
-
+constructor(private eleRef: ElementRef){}
 
 
    @HostListener('document:mouseover', ['$event'])
@@ -113,11 +113,21 @@ export class NavmenuComponent {
           //Füge bei allen anderen Untermenüs die 'd-none'-Klasse hinzu, AUßER beim Menüpunkt mit dem Logo ('indexOfPositionOfLogo')
           if (i != this.indexOfPositionOfLogo){(<HTMLInputElement>document.getElementById(i.toString())).classList.add('d-none')};
         }
-      };
-      
-    }
-
+      };     
+    };
    }
-   
+
+
+   //In Angular-Komponenten wird this.eleRef normalerweise durch die ElementRef-Klasse bereitgestellt, die eine Referenz auf das Host-Element der Komponente enthält. 
+   //Das nativeElement-Attribut wird dann verwendet, um auf das tatsächliche DOM-Element zuzugreifen.
+   MouseLeavingTheGlobalContainer(event: MouseEvent): boolean{
+    let element: HTMLElement = event.target as HTMLElement;
+    console.log('ID des verlassenen Elements ',element.id);
+    console.log('HTML-Element dieser Komponente ',(this.eleRef.nativeElement as HTMLElement));
+    console.log('Ist das verlassene Element Bestandteil dieser Komponente? ',(this.eleRef.nativeElement as HTMLElement).contains(element));
+    if(element.id=='xxxx'){for(let i=0;i<this.routes.length;i++){if(i != this.indexOfPositionOfLogo){(<HTMLInputElement>document.getElementById(i.toString())).classList.add('d-none')}}};
+   return (this.eleRef.nativeElement as HTMLElement).contains(element);
+  }
+
 
 }
