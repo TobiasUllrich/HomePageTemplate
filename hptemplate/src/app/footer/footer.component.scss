@@ -1,10 +1,10 @@
 :host{
-    background-color: lightcyan;
-    
+    background-color: var(--background-color-footer);
+    color: var(--text-color-footer);
 }
 
 footer{
-    background-color: aqua;
+    background-color: var(--background-color2);
     display:flex;
     justify-content:space-between;
     //flex-direction:column;

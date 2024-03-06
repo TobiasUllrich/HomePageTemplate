@@ -1,10 +1,12 @@
 :host{
+    background-color: var(--background-color-navmenu);
+    color: var(--text-color-navmenu);
     font-size: 18px;
     font-weight: bold;   /* equals 700 */
 }
 
 .header-links{
-    background-color: red;
+    background-color: var(--background-color4);
     display:flex;
     justify-content: space-around;
     align-items: center;

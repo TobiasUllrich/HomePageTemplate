@@ -1,5 +1,6 @@
 :host{
-    background-color: yellow;
+    background-color: var(--background-color1);
+    color: var(--text-color);
     display: flex; //Erst jetzt bekommt app-root-Container Farbe
     flex-direction: column;
     position: relative; //Sorgt dafür, dass alles was sich als absolutes Element in app-component befindet immer richtig ausgerichtet wird
@@ -7,22 +8,22 @@
     bottom: 0;
     left: 0;
     right: 0; 
-    border: solid 3px yellow; // Nur zum Debuggen -> Am Ende wieder entfernen
+    border: solid 3px var(--background-color5); // Nur zum Debuggen -> Am Ende wieder entfernen
 }
 
 .routerDesign{
-    background-color: lightpink;
+    background-color: var(--background-color2);
     display:flex;  //Erst jetzt bekommen alle Komponenten die vom router-outlet angesteuert werden Farbe
     flex:6;
     min-height: calc(100vh - 100px - 100px); //Nimmt immer mindestens den Rest-Raum ein, der abzüglich von header & footer noch übrig bleibt
 }
 
 .sideBoxLeft{
-    background-color: red;
+    background-color: var(--background-color3);
     flex:2;
 }
 
 .sideBoxRight{
-    background-color: blue;
+    background-color: var(--background-color4);
     flex:2;
 }
