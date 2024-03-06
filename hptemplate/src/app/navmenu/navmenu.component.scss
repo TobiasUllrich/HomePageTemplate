@@ -3,6 +3,7 @@
     color: var(--text-color-navmenu);
     font-size: 18px;
     font-weight: bold;   /* equals 700 */
+    height:100%;
 }
 
 .header-links{
@@ -10,7 +11,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    height:100px;
+    height:100%;
 }
 
 .header-links-main-nav{
@@ -63,6 +64,13 @@
     flex-direction:column;
 }
 
+.invStyle{
+    margin:0 !important;
+    color:transparent;
+    font-size:14px;
+    cursor:default;
+}
+
 .subpointStyle{
     margin:0 !important;
     // border-left: 1px solid black;
@@ -70,7 +78,6 @@
     // border-bottom: 1px solid black;
     font-size:14px;
     cursor:pointer;
-    
 }
 
 .subpointStyle:hover{

@@ -1,14 +1,14 @@
 :host{
       background-color: var(--background-color-header);
       color: var(--text-color-header);
-      height:100px;
+      height:200px;
 }
 
 header{
       background-color: var(--background-color2);
       display:flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       height:100%;
       width:100%;
 }

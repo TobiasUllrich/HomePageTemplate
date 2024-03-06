@@ -1,6 +1,6 @@
-<div class="header-links" (mouseout)="MouseLeavingTheGlobalContainer($event)" id="xxxx">
+<div class="header-links">
 
-  <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav">
+  <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav" id="{{'top' + i}}">
 
       <ng-container *ngIf="i!==indexOfPositionOfLogo">
         <div class="main-box">
@@ -16,6 +16,7 @@
              <nav id="{{'sub' + i + '1'}}" class="subpointStyle" routerLink="{{ subMenuRoutes1[i] }}"> {{ subMenuDisplay1[i] }} </nav>
              <nav id="{{'sub' + i + '2'}}" class="subpointStyle" routerLink="{{ subMenuRoutes2[i] }}"> {{ subMenuDisplay2[i] }} </nav>
              <nav id="{{'sub' + i + '3'}}" class="subpointStyle" routerLink="{{ subMenuRoutes3[i] }}"> {{ subMenuDisplay3[i] }} </nav>
+             <nav id="{{'inv' + i + '3'}}" class="invStyle"> invisible </nav>
          </div>
          <!--Untermenupunkte-->
         </div>
