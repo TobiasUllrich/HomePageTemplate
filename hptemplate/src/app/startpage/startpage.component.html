@@ -6,7 +6,7 @@
 
            <!-- Um beim ersten Element des Arrays das Bild Rechts zu haben -->
            <div *ngIf="i == 0" style="display:flex;flex-direction:row-reverse;">
-             <img src="assets/img/{{ picture }}.jpg">
+             <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}.jpg">
              <div style="display:flex;flex-direction:column;">
                <h2>{{ caption[i] }}</h2>
                <span>{{ text[i] }}</span>
