@@ -38,7 +38,7 @@ import { CustombuttonComponent } from './custombutton/custombutton.component';
     PagesixComponent,
     PagesevenComponent,
     ContactboxComponent,
-    CustombuttonComponent
+    CustombuttonComponent,
   ],
   imports: [
     BrowserModule,

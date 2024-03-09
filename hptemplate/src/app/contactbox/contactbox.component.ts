@@ -16,13 +16,6 @@ export class ContactboxComponent implements OnInit{
     constructor() { }
   
 
-    /**
-     * For the cusomized Button
-     */
-    label = 'brrrrrrrZZZ';
-    link = '';
-    where = '';
-    
 
 
     ngOnInit(): void {

@@ -1,28 +1,47 @@
+<div style="display:flex;flex-direction:column;width:100%;align-items:center;">
+
 <h1>Beispiele für Horoskop-Interpretationen</h1>
 
-<h2>Beispiel 1</h2>
-<img src="assets/img/Radix1.jpg">
-<span>
-    Daten zur Radix: <br>
-    Person geboren am 19.02.1974 um 22:00 Uhr in Frankfurt am Main <br>
-    Reading am 10.03.2021
-</span>
-<iframe width="100%" height="100%" src="assets/pdf/Interpretation Radix1.pdf"> Überschriften </iframe>
+<ng-container *ngFor="let pdfUrl of pdfUrls; let i = index">
 
-<h2>Beispiel 2</h2>
-<img src="assets/img/Radix2.jpg">
-<span>
-    Daten zur Radix: <br>
-    Person geboren am 16.11.1962 um 19:20 Uhr in Pinneberg <br>
-    Reading am 20.03.2021
-</span>
-<iframe width="100%" height="100%" src="assets/pdf/Interpretation Radix2.pdf"> Überschriften </iframe>
+    <!-- Erste Interpretation soll einen Abstand nach oben haben -->
+    <div *ngIf="i == 0" class="styleOfInterpretation">
+        <h2>Beispiel {{ i+1 }}</h2>
+        <img src="assets/img/{{ nameOfImg[i] }}.jpg">
+        <span class="styleOfTextblockUnderRadiximage">
+            <b>Daten zur Radix:</b> <br>
+            {{ birthdata[i] }} <br>
+            {{ dateofreading[i] }} <br>
+        </span>
+        <embed class="pdf-sizing" [src]="pdfUrl" type="application/pdf">
+      </div> 
 
-<h2>Beispiel 3</h2>
-<img src="assets/img/Radix3.jpg">
-<span>
-    Daten zur Radix: <br>
-    Person geboren am 28.06.1964 um 15:10 Uhr in Dachau <br>
-    Reading am 22.01.2021
-</span>
-<iframe width="100%" height="100%" src="assets/pdf/Interpretation Radix3.pdf"> Überschriften </iframe>
+    <!-- Alle Interpretationen außer die erste und die letze -->
+    <div *ngIf="i !== 0 && i !== pdfUrls.length-1" class="styleOfInterpretation">
+        <h2>Beispiel {{ i+1 }}</h2>
+        <img src="assets/img/{{ nameOfImg[i] }}.jpg">
+        <span class="styleOfTextblockUnderRadiximage">
+            <b>Daten zur Radix:</b> <br>
+            {{ birthdata[i] }} <br>
+            {{ dateofreading[i] }} <br>
+        </span>
+        <embed class="pdf-sizing" [src]="pdfUrl" type="application/pdf">
+      </div>  
+
+    <!-- Letzte Interpretation soll einen größeren Abstand nach unten haben wegen footer -->
+    <div *ngIf="i == pdfUrls.length-1" class="styleOfInterpretation forLastContainer">
+        <h2>Beispiel {{ i+1 }}</h2>
+        <img src="assets/img/{{ nameOfImg[i] }}.jpg">
+        <span class="styleOfTextblockUnderRadiximage">
+            <b>Daten zur Radix:</b> <br>
+            {{ birthdata[i] }} <br>
+            {{ dateofreading[i] }} <br>
+        </span>
+        <embed class="pdf-sizing" [src]="pdfUrl" type="application/pdf">
+      </div>  
+
+
+
+</ng-container>
+ 
+</div>

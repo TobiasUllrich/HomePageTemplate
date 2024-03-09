@@ -2,15 +2,12 @@
 
     <div id="contact" class="contact-container">
     
-    <h1>Contact</h1>
+    <h1>Kontakt</h1>
     
     <div class="contact-textandform">
     
       <div class="contact-text">
-        <h2>Got a problem to solve?</h2>
-        <span class="contact-text-description">Schildere mir dein Anliegen und ich setze mich schnellstmöglich mit dir in Kontakt!
-        </span><br>
-        <span class="contact-contactme">Need a Frontend developer? <b>Contact me!</b></span>
+        <h2>Schildere mir dein Anliegen und ich setze mich schnellstmöglich mit dir in Kontakt!</h2>
       </div>
     
            <!-- #myForm um das Formular anzusprechen-->
@@ -20,7 +17,7 @@
              <form id="formular" class="contact-form" (submit)="sendMail()" ngNativeValidate #myForm>
               <div class="input-group"> 
                   <input class="name" required type="text" placeholder="" name="name" (input)="onChange('name')" (focus)="shiftLabelUpwards('name')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('name')" #nameField>
-                  <label id="name-label" class="label-name">Your name</label>
+                  <label id="name-label" class="label-name">Dein Name</label>
               </div>
                 <span id="namereq">
                   .
@@ -31,7 +28,7 @@
                 <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 <div class="input-group">
                   <input class="email" required type="email" placeholder="" name="email" (input)="onChange('email')" (focus)="shiftLabelUpwards('email')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('email')" #emailField>
-                  <label id="email-label" class="label-email">Your email</label>
+                  <label id="email-label" class="label-email">Deine Email</label>
                 </div>
                 <span id="emailreq">
                   .
@@ -42,7 +39,7 @@
                 <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
                 <div class="input-group">
                   <textarea class="text" required type="text" placeholder="" name="message" (input)="onChange('message')" (focus)="shiftLabelUpwards('message')" (blur)="shiftLabelDownwardsIfInputFieldEmpty('message')" #messageField></textarea>
-                  <label id="message-label" class="label-message">Your message</label>
+                  <label id="message-label" class="label-message">Deine Nachricht</label>
                 </div>
                 <span id="messagereq">
                   .
@@ -52,8 +49,7 @@
                 <img id="messageok" class="alert2 d-none" src="assets/img/ok.png">       
                 <!-- For input: If inputField filled, then "OK", otherwise "ALERT" -->
 
-                <button type="submit" #sendbutton>Say hello :)</button>
-                <app-custombutton [buttonText]="label" [buttonLink]="link" [buttonWhere]="where"></app-custombutton>
+                <button type="submit" #sendbutton>Abschicken</button>
     
              </form>
  
