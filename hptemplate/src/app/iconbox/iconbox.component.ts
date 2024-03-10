@@ -9,17 +9,19 @@ export class IconboxComponent {
 
   logos: string[] =[
     'youtube',
-    'instagram',
     'facebook',
-    'twitter',
-    'tik-tok'
+    'telegram',
+    // 'instagram',
+    // 'twitter',
+    // 'tik-tok'
    ]; 
   links: string[] =[
      'https://www.youtube.com/@EvolutionaereAstrologie',
-     'https://www.instagram.com/tobiasulli/',
      'https://www.facebook.com/UllrichTobias',
-     'twitter',
-     'tik-tok'
+     'https://t.me/Evolutionary_Astrology',
+    //  'https://www.instagram.com/tobiasulli/',
+    //  'twitter',
+    //  'tik-tok'
     ]; 
 
     goToUrl(id: number){

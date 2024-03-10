@@ -6,7 +6,6 @@
 footer{
     display:flex;
     justify-content:space-around;
-    //flex-direction:column;
     align-items: center;
     height:200px;
     border-top: solid 1px;
@@ -14,23 +13,33 @@ footer{
 }
 
 img{
-    height:50px;
+    height:80px;
 }
 
-.impressum{
+.sizingLogoBox{
+    display:flex;
+    justify-content: center;
+    width:200px; //Muss wegen Symmetrie genauso groß sein wie <app-iconbox>
+}
+
+.sizingImpressum{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sizingIconBox{
+    display:flex;
 }
 
 h1{
     margin:0;
     cursor:default;
 }
+
 nav{
     cursor:pointer;
 }
-
 
 app-iconbox{
     height:50px; //Notwendig um die iconbox richtig zu dimensionieren
