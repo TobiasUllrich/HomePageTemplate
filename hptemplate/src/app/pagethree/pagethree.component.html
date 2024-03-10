@@ -48,5 +48,6 @@ Herzliche Grüße
 Tobias Ullrich
 
 
-<h1>BUTTON KAUFEN!</h1>
-<h1>BUTTON KONTAKTIERE MICH!</h1>
+
+<app-custombutton (click)="goToUrl('https://ullrichtobias.gurucan.com/')" [buttonText]="label2"></app-custombutton>
+<app-custombutton (click)="routeTo('/Kontakt')" [buttonText]="label"></app-custombutton>
