@@ -33,10 +33,11 @@ export class PagefiveComponent implements OnInit {
    ];
 
   pdfUrls: SafeResourceUrl[] = [];
-
-
+  
+  
   constructor(private sanitizer: DomSanitizer) { }
-
+  
+  
   ngOnInit(): void {
     this.nameOfPdf.forEach(pdfName => {
       const pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`assets/pdf/${pdfName}.pdf#toolbar=0&zoom=FitH`);
@@ -44,5 +45,4 @@ export class PagefiveComponent implements OnInit {
     });
   }
 
-  
 }

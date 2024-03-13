@@ -2,3 +2,38 @@
     background-color: var(--background-color-page);
     color: var(--text-color-page);
 }
+
+.pageContainer{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:150px;
+    margin-bottom:150px;
+}
+
+.textboxForCourse{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+    background-color:white;
+}
+
+.picSizing{
+    height:100%;
+    object-fit: contain;
+}
+
+.flexone{
+    flex:1;
+}
+
+.mrgbott{
+ margin-bottom:33px;
+}
+
+.completeCourseBox{
+    display:flex;
+    height:300px;
+    margin-bottom:50px;
+}
