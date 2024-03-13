@@ -3,118 +3,46 @@
 
     <ng-container *ngFor="let courseImg of courseImgs; let i = index">
 
+    <!-- Wird als Überschrift vor den Komplettkursen angezeigt -->    
+    <h1 *ngIf="i == 0">Komplette Kurse</h1>
+
     <!-- Ersten beiden Array-Punkte sind komplette Kurse -->
-    <div *ngIf="i <= 1" class="completeCourseBox">
+    <div *ngIf="i <= 1" class="completeCourseBox boxSizeNormal">
         <div> 
-            <img class="picSizing"  src="assets/img/{{ courseImg }}.jpg">
+            <img class="picSizing"  src="assets/img/{{ courseImg }}">
         </div>
 
         <div class="flexone textboxForCourse">
             <h3>{{ courseName[i] }}</h3>
             <span class="mrgbott">
-                • Inhalt: {{ courseContent[i] }} <br>
-                • Dauer: {{ courseTime[i] }} <br>
-                • Preis: {{ coursePrice[i] }}
+                <b>• Inhalt: </b>{{ courseContent[i] }} <br>
+                <b>• Dauer: </b> {{ courseTime[i] }} <br>
+                <b>• Preis: </b> {{ coursePrice[i] }}
             </span>
             <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label"></app-custombutton>
         </div>  
     </div>
 
+    <!-- Wird als Überschrift vor den einzelnen Kapiteln angezeigt angezeigt -->   
+    <h1 *ngIf="i == 2">Einzelne Kapitel</h1>
     
     <!-- Der Rest im Array besteht aus einzelnen Kapiteln -->
-    <div *ngIf="i > 1" class="completeCourseBox">
+    <div *ngIf="i > 1" class="completeCourseBox boxSizeBigger">
         <div> 
-            <img class="picSizing"  src="assets/img/{{ courseImg }}.jpg">
+            <img class="picSizing"  src="assets/img/{{ courseImg }}">
         </div>
 
-        <div class="flexone textboxForCourse">
+        <div class="flexone textboxForCourse" style="margin-left:24px;">
             <h3>{{ courseName[i] }}</h3>
             <span class="mrgbott">
-                • Inhalt: {{ courseContent[i] }} <br>
-                • Dauer: {{ courseTime[i] }} <br>
-                • Preis: {{ coursePrice[i] }}
+                <b>• Inhalt: </b>{{ courseContent[i] }} <br>
+                <b>• Dauer: </b> {{ courseTime[i] }} <br>
+                <b>• Preis: </b> {{ coursePrice[i] }}
             </span>
             <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label2"></app-custombutton>
         </div>  
     </div>
 
-
     </ng-container>
 
 </div>
-
-
-
-2. Planeten unseres Sonnensystems
-Sonne, Merkur, Venus, Erde, Mond, Mondknoten, Mars, Jupiter, Saturn, Chiron, Uranus, Neptun, Pluto
-+ Übungsaufgaben
-Dauer: 1:52h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/6117659e11c69300178de655
-
-3. Astronomische Grundlagen
-Entstehung des Tierkreises, Entstehung der AC-DC-Achse, Entstehung der MC-IC-Achse, Präzession, Bewegungen in der Radix
-+ Übungsaufgaben
-Dauer: 1:03h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/611a25787df2c400172ad4df
-
-4. Grundlagen des Tierkreises
-Einheitskreis, Polaritäten, Qualitäten/Modalitäten, Elemente
-+ Übungsaufgaben
-Dauer: 1:40h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/6125555671a5c900118baf9e
-
-5. Die Tierkreiszeichen
-Widder, Stier, Zwilling, Krebs, Löwe, Jungfrau, Waage, Skorpion, Schütze, Steinbock, Wassermann, Fische, Stichwort-Methode
-+ Übungsaufgaben
-Dauer: 3:31h, Preis: 95€
-https://ullrichtobias.gurucan.com/app/plans/614673213ce05d001c14c1c7
-
-6. Häusersysteme
-Meridian, Morinus, Regiomontanus, Campanus, Porphyrius, Koch, Alcabitius, Placidus, Äquales-Aszendenten-Häusersystem, Ganze-Zeichen-Häusersystem, Bedeutung der Häuser
-+ Übungsaufgaben
-Dauer: 2:42h, Preis: 95€
-https://ullrichtobias.gurucan.com/app/plans/61cc66440f92c400136ccd49
-
-7. Die Aspekte
-Konjunktion, Sextil, Trigon, Quincunx, Opposition, Quintil & Bi-Quintil, Halb-Quadrat, Anderthalb-Quadrat, Halb-Sextil, Nonil, Septil, Stichwort-Methode mit 3 & 4 Energien, Aspektfiguren:
-Stellium, T-Quadrat, Großes Trigon, Großes Kreuz, Yod, Der Drache, Mystisches Rechteck
-+ Übungsaufgaben
-Dauer: 2:19h, Preis: 95€
-https://ullrichtobias.gurucan.com/app/plans/61cc694158a035001244dd1b
-
-8. Evolutionäre Horoskopdeutung
-Essentielle Würden & Dekanate, Die 6 Schritte des Deutens, Interpretations-Checkliste, Pluto-Methode, Mondknoten-Quadrate, Pluto Konjunktion Südknoten, Pluto Konjunktion Nordknoten, Mondknotenherrscher am jeweils anderen Knoten, Muster erkennen, Phasenlehre, Rückläufige Planeten
-Dauer: 3:30h, Preis: 95€
-https://ullrichtobias.gurucan.com/app/plans/61edd896bc1459001253a54b
-
-
-
-1. Call
-Trinität der Vergangenheit
-Dauer: 1:38h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/640474472542de0012460f43
-
-2. Call
-Trinität der Zukunft
-Dauer: 2:00h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/640474bb8128f1001287bf91
-
-3. Call
-Mondknoten-Quadrat I
-Dauer: 2:00h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/640475352542de0012460f5a
-
-4. Call
-Mondknoten-Quadrat II
-Dauer: 1:14h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/6404755981805d001371b7bb
-
-5. Call
-Transite I
-Dauer: 1:44h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/64047584ff4f830012a3b633
-
-6. Call
-Transite II
-Dauer: 1:37h, Preis: 50€
-https://ullrichtobias.gurucan.com/app/plans/6404759dff1a890013ff42f8

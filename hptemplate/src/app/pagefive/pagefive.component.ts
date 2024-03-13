@@ -9,9 +9,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class PagefiveComponent implements OnInit {
 
   nameOfImg: string[] =[
-    'Radix1',
-    'Radix2',
-    'Radix3',
+    'Radix1.jpg',
+    'Radix2.jpg',
+    'Radix3.jpg',
    ];
 
    birthdata: string[] =[

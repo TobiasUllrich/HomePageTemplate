@@ -8,10 +8,10 @@ import { Component, HostListener } from '@angular/core';
 export class StartpageComponent {
 
   pictures: string[] =[
-    'Tobias-Ullrich',
-    'kurse-main',
-    'cranio-main',
-    'astro-main'
+    'Tobias-Ullrich.jpg',
+    'kurse-main.jpg',
+    'cranio-main.jpg',
+    'astro-main.jpg'
    ];
 
   caption: string[] =[

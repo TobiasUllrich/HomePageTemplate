@@ -19,6 +19,7 @@ import { PagesixComponent } from './pagesix/pagesix.component';
 import { PagesevenComponent } from './pageseven/pageseven.component';
 import { ContactboxComponent } from './contactbox/contactbox.component';
 import { CustombuttonComponent } from './custombutton/custombutton.component';
+import { VideobackgroundComponent } from './videobackground/videobackground.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CustombuttonComponent } from './custombutton/custombutton.component';
     PagesevenComponent,
     ContactboxComponent,
     CustombuttonComponent,
+    VideobackgroundComponent,
   ],
   imports: [
     BrowserModule,

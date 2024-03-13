@@ -26,6 +26,7 @@ const routes: Routes = [
 { path: 'Astrologie/Horoskope', component: PagefiveComponent },
 { path: 'Cranio-Sacral/Diplomarbeit', component: PagesixComponent },
 { path: 'Kurse/Kursinhalte', component: PagesevenComponent },
+
 ];
 
 @NgModule({

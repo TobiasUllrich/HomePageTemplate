@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class IconboxComponent {
 
   logos: string[] =[
-    'youtube',
-    'facebook',
-    'telegram',
+    'youtube.png',
+    'facebook.png',
+    'telegram.png',
     // 'instagram',
     // 'twitter',
     // 'tik-tok'

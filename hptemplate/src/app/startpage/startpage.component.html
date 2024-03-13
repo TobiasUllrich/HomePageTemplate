@@ -6,7 +6,7 @@
 
            <!-- Um beim ersten Element des Arrays das Bild Rechts zu haben -->
            <div *ngIf="i == 0" class="containerDesign forContainerWithProfilePic">
-             <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}.jpg">
+             <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}">
              <div class="flexboxAndflexdirectioncolumn">
                <h2>{{ caption[i] }}</h2>
                <span>{{ text[i] }}</span>
@@ -14,7 +14,7 @@
           </div>
           <!-- Alle restlichen Bilder sollen links sein -->
           <div *ngIf="i !== 0 && i !== pictures.length-1" class="containerDesign">
-            <img src="assets/img/{{ picture }}.jpg">
+            <img src="assets/img/{{ picture }}">
             <div class="flexboxAndflexdirectioncolumn">
               <h2>{{ caption[i] }}</h2>
               <span>{{ text[i] }}</span>
@@ -22,7 +22,7 @@
          </div>
          <!-- Letztes Bild soll auch links sein, aber einen größeren Abstand nach unten haben wegen footer -->
          <div *ngIf="i == pictures.length-1" class="containerDesign forLastContainer">
-         <img src="assets/img/{{ picture }}.jpg">
+         <img src="assets/img/{{ picture }}">
          <div class="flexboxAndflexdirectioncolumn">
             <h2>{{ caption[i] }}</h2>
             <span>{{ text[i] }}</span>
