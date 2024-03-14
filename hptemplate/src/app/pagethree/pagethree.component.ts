@@ -15,6 +15,12 @@ export class PagethreeComponent {
      */
     label = 'Kontaktiere mich';
     label2 = 'Kurs kaufen';
+    label3 = 'Video zum Kurs';
+
+    linkToCourse: string[] =[
+      'https://ullrichtobias.gurucan.com/app/plans/61f95636e2253d0013950a9d',
+      'https://ullrichtobias.gurucan.com/app/plans/64047295ff1a890013ff42e3',
+    ]
 
     /**
      * 
