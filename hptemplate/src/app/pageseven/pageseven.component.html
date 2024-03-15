@@ -5,6 +5,7 @@
 
     <!-- Wird als Überschrift vor den Komplettkursen angezeigt -->    
     <h1 *ngIf="i == 0">Komplette Kurse</h1>
+    <div *ngIf="i == 0" style="width:50px;margin-bottom:50px;border:4px solid;"></div> <!-- UNDERLINE -->
 
     <!-- Ersten beiden Array-Punkte sind komplette Kurse -->
     <div *ngIf="i <= 1" class="completeCourseBox boxSizeNormal">
@@ -27,9 +28,28 @@
     <h1 *ngIf="i == 2">Einzelne Kapitel</h1>
     
     <!-- Der Rest im Array besteht aus einzelnen Kapiteln -->
-    <div *ngIf="i > 1" class="completeCourseBox boxSizeBigger">
+    <!-- Einmal mein Video-Kurs -->
+    <div *ngIf="i > 1 && i < 10" class="completeCourseBox boxSizeBigger">
         <div> 
             <img class="picSizing"  src="assets/img/{{ courseImg }}">
+        </div>
+
+        <div class="flexone textboxForCourse" style="margin-left:24px;">
+            <h3>{{ courseName[i] }}</h3>
+            <span class="mrgbott">
+                <b>• Inhalt: </b>{{ courseContent[i] }} <br>
+                <b>• Dauer: </b> {{ courseTime[i] }} <br>
+                <b>• Preis: </b> {{ coursePrice[i] }}
+            </span>
+            <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label2"></app-custombutton>
+        </div>  
+    </div>
+
+    <!-- Einmal mein Live-Kurs (hier wird die Nummer des Calls über das Bild gelegt) -->
+    <div *ngIf="i > 9" class="completeCourseBox boxSizeBigger">
+        <div class="posrel">
+            <img class="picSizing"  src="assets/img/{{ courseImg }}">
+            <span class="textOverPic"><b>{{ i-9 }} . Call</b></span>
         </div>
 
         <div class="flexone textboxForCourse" style="margin-left:24px;">

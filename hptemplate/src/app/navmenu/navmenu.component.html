@@ -5,8 +5,9 @@
       <ng-container *ngIf="i!==indexOfPositionOfLogo">
         <div class="main-box">
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
-          <span id="{{'main' + i}}" class="menu-point-to-hover" routerLink="{{ route }}">
-            {{ display[i]}}
+          <span class="menu-point-to-hover" routerLink="{{ route }}">
+            <!--Hauptmenupunkt bekommt einen Pfeil, wenn es mindestens einen Untermenüpubkt gibt-->
+            <div id="{{'main' + i}}"> {{ display[i]}} </div> <div *ngIf="subMenuRoutes1[i]!==''" id="{{'arro' + i}}" class="arrowStyle">&rsaquo;</div>
           </span>
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
 

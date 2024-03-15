@@ -26,6 +26,11 @@ img{
     padding:20px;
 }
 
+.containerDesign:hover{
+    transform: scale(1.05);
+    cursor:pointer;
+}
+
 .forContainerWithProfilePic{
     flex-direction:row-reverse;
     justify-content:space-between;

@@ -10,6 +10,7 @@
              <div class="flexboxAndflexdirectioncolumn">
                <h2>{{ caption[i] }}</h2>
                <span>{{ text[i] }}</span>
+               <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
              </div>
           </div>
           <!-- Alle restlichen Bilder sollen links sein -->
@@ -18,6 +19,7 @@
             <div class="flexboxAndflexdirectioncolumn">
               <h2>{{ caption[i] }}</h2>
               <span>{{ text[i] }}</span>
+              <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
             </div>
          </div>
          <!-- Letztes Bild soll auch links sein, aber einen größeren Abstand nach unten haben wegen footer -->
@@ -26,6 +28,7 @@
          <div class="flexboxAndflexdirectioncolumn">
             <h2>{{ caption[i] }}</h2>
             <span>{{ text[i] }}</span>
+            <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
           </div>
        </div>
 

@@ -32,6 +32,18 @@ export class StartpageComponent {
     'Astrologie ist eine Sprache. Wenn du diese Sprache verstehst spricht der Himmel zu dir." - Dane Rudhyar MEHR'
    ];
 
+   routes: string[] =[ 
+    '/UeberMich',
+    '/Kurse',
+    '/Cranio-Sacral',
+    '/Astrologie',
+   ];
+
+    /**
+     * Labels for the customized Button
+     */
+    label = 'Mehr';
+
 
    @HostListener("window:scroll", ["$event"])
    onWindowScroll() {
@@ -82,8 +94,8 @@ export class StartpageComponent {
 
 
 
-//ELEREF FÜR DOKU
 
+//ELEREF FÜR DOKU
 // constructor(private eleRef: ElementRef){}
 
 // <div id="x" (mouseout)="MouseLeavingTheGlobalContainer($event)">

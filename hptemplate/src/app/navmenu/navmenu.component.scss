@@ -36,6 +36,12 @@
     font-weight: 1000;
 }
 
+.arrowStyle{
+    text-decoration: unset;
+    margin-left:15px;
+    transform: rotate(90deg);
+}
+
 /* Für Klappmenu */
 .main-box{
     display:flex;
@@ -45,13 +51,19 @@
 }
 .main-box:hover{
     cursor:pointer;
-    text-decoration: underline;
+    // text-decoration: underline;
     transform: scale(1.1);
     transition: transform 330ms ease-in-out;
     font-weight: 1000;
 }
 
 .menu-point-to-hover{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-point-to-hover:after{
     width:100%;
     cursor:pointer;
 }

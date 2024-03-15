@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navmenu',
@@ -90,7 +90,7 @@ export class NavmenuComponent {
    ];
 
    
-constructor(private eleRef: ElementRef){}
+constructor(){}
 
 
    @HostListener('document:mouseover', ['$event'])
@@ -101,7 +101,7 @@ constructor(private eleRef: ElementRef){}
     //console.log('id nach ab 5ter Stelle:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
 
     //[1.] Wenn ein Main-HTML-Element gehovert wird, dann mache das Untermenü (hat die id=4, wenn main4 gehovert wird) sichtbar
-    if(elementId.substring(0,4) == 'main'){
+    if(elementId.substring(0,4) == 'main' || elementId.substring(0,4) == 'arro'){
      
       //Gehe durch das Array mit den Menü-Punkten
       for(let i=0;i<this.routes.length;i++){
