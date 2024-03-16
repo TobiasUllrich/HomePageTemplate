@@ -1,4 +1,10 @@
 :host {
     background-color: var(--background-color-contact);
     color: var(--text-color-contact);
+    display:flex;
+    flex-direction: column;
+}
+
+.mrgbot{
+    margin-bottom:75px;
 }

@@ -8,12 +8,9 @@
 }
 
 
-// .contact-center {
-//     background-color: white;
-//     margin-bottom: 125px;
-//     margin-left: 50px;
-//     margin-right: 100px;
-// }
+.contact-center {
+    margin-bottom: 50px;
+}
 
 .contact-container {
     position: relative;
@@ -22,13 +19,11 @@
     margin: 0;
 
     h1 {
-        font-size: 90px;     
         margin: 0;
         margin-bottom: 50px;
     }
 
-    h2 {
-        font-size: 32px;    
+    h2 { 
         margin: 0;
         margin-bottom: 30px !important;
     }
@@ -168,6 +163,7 @@
     }
 
     button {
+        color:#0B2A7A;
         height: 58px;
         width: 200px;
         background-color: white;

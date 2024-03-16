@@ -3,6 +3,10 @@
     color: var(--text-color-page);
 }
 
+h2{
+    margin-top: 0 !important;
+}
+
 img{
     width:250px;
     object-fit:contain;
@@ -10,9 +14,28 @@ img{
 
 .explanation-container{
  display:flex;
- margin-bottom:50px;
+ margin-bottom:75px;
 }
 
 .flexone{
     flex:1;
 }
+
+.astrologieBox{
+    display:flex;
+    flex-direction: column;
+}
+
+.humanDesignBox{
+    display:flex;
+    flex-direction: column;
+}
+
+.lastContainerOfPage{
+    display: flex;
+    justify-content: center;
+    margin-top:75px;
+    margin-bottom:75px;
+}
+
+

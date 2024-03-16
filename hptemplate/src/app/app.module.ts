@@ -20,6 +20,7 @@ import { PagesevenComponent } from './pageseven/pageseven.component';
 import { ContactboxComponent } from './contactbox/contactbox.component';
 import { CustombuttonComponent } from './custombutton/custombutton.component';
 import { VideobackgroundComponent } from './videobackground/videobackground.component';
+import { MapboxComponent } from './mapbox/mapbox.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { VideobackgroundComponent } from './videobackground/videobackground.comp
     ContactboxComponent,
     CustombuttonComponent,
     VideobackgroundComponent,
+    MapboxComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,11 +22,13 @@ img{
     display:flex;
     margin-bottom:50px;
     border: solid 1px;
-    box-shadow: 0px 0px 30px 0px;
+    // box-shadow: 0px 0px 30px 0px;
     padding:20px;
+    background-color: white;
 }
 
 .containerDesign:hover{
+    transition: all 225ms ease-in-out;
     transform: scale(1.05);
     cursor:pointer;
 }
@@ -34,9 +36,39 @@ img{
 .forContainerWithProfilePic{
     flex-direction:row-reverse;
     justify-content:space-between;
-    margin-top:85px;
+    margin-top:50px;
 }
 
-.forLastContainer{
-    margin-bottom:150px;
+.mrgbot{
+    margin-bottom:75px;
+}
+
+.logoAndText{
+    display: flex;
+}
+
+.youTubeLogo{
+    height:100px;
+    width:auto;
+}
+
+.youTubeLogo:hover{
+    cursor:pointer;
+    transform: scale(1.2);
+    transition: transform 330ms ease-in-out;
+}
+
+.textBoxStyle{
+    display: flex;
+    flex:1;
+    align-items: center;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border: solid 1px;
+}
+
+.lastContainerOfPage{
+    margin-bottom:150px; 
 }

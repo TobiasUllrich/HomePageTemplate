@@ -23,7 +23,7 @@
             </div>
          </div>
          <!-- Letztes Bild soll auch links sein, aber einen größeren Abstand nach unten haben wegen footer -->
-         <div *ngIf="i == pictures.length-1" class="containerDesign forLastContainer">
+         <div *ngIf="i == pictures.length-1" class="containerDesign mrgbot">
          <img src="assets/img/{{ picture }}">
          <div class="flexboxAndflexdirectioncolumn">
             <h2>{{ caption[i] }}</h2>
@@ -35,15 +35,30 @@
         </ng-container>
     </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3134.1179256427804!2d10.817709324088687!3d48.65828163803115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ed12943ab44e5%3A0x43f4d4a4755960d7!2sK%C3%B6rper%2C%20Geist%20%26%20Seele!5e0!3m2!1sde!2sde!4v1703883359625!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Hinweis auf YouTube -->
+    <div class="noticeBoxYoutube mrgbot">
+      <!-- HEADER -->
+      <h1>Folge mir auf YouTube</h1>
+      <!-- UNDERLINE -->
+      <div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
+      <!-- TEXT -->
+      <div class="logoAndText">
+        <img class="youTubeLogo" src="assets/img/youtube.png" (click)="goToUrl('https://www.youtube.com/@EvolutionaereAstrologie');">
+        <div class="textBoxStyle">Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!</div>
+      </div>    
+    </div>
 
-    <h1>Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!</h1>
-    <h1>Mit der Biodynamischen Cranio-Sacral-Therapie stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!</h1>
+    <!-- Box mit Karte -->
+    <app-mapbox></app-mapbox>
 
-    <span>Tobias Ullrich
-
-      Bahnhofstraße 47
-      
-      86690 Mertingen</span>
+    <!-- Hinweis auf kein Ersatz für Arzt-->
+    <div class="lastContainerOfPage">
+      <!-- HEADER -->
+      <h1>Information</h1>
+      <!-- UNDERLINE -->
+      <div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
+      <!-- TEXT -->
+      <div class="textBoxStyle">Mit der Biodynamischen Cranio-Sacral-Therapie stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!</div>
+    </div>
 
 </main>

@@ -18,8 +18,10 @@ img{
 
 .sizingLogoBox{
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    width:200px; //Muss wegen Symmetrie genauso groß sein wie <app-iconbox>
+    font-size: 17px;
+    width:210px; //Muss wegen Symmetrie genauso groß sein wie <app-iconbox>
 }
 
 .sizingImpressum{

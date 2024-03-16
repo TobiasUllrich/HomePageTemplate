@@ -9,6 +9,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top:50px;
     margin-bottom:150px;
+}
+
+.noMargintop{
+    margin-top:0 !important;
+}
+
+.mrgbot{
+    margin-bottom:50px;
 }

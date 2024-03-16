@@ -2,6 +2,9 @@
 
 <h1>Beispiele für Horoskop-Interpretationen</h1>
 
+<!-- UNDERLINE -->
+<div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
+
 <ng-container *ngFor="let pdfUrl of pdfUrls; let i = index">
 
     <!-- Erste Interpretation soll einen Abstand nach oben haben -->
@@ -13,7 +16,7 @@
             {{ birthdata[i] }} <br>
             {{ dateofreading[i] }} <br>
         </span>
-        <embed class="pdf-sizing" [src]="pdfUrl" type="application/pdf">
+        <embed class="pdf-sizing mrgbot" [src]="pdfUrl" type="application/pdf">
       </div> 
 
     <!-- Alle Interpretationen außer die erste und die letze -->
@@ -25,7 +28,7 @@
             {{ birthdata[i] }} <br>
             {{ dateofreading[i] }} <br>
         </span>
-        <embed class="pdf-sizing" [src]="pdfUrl" type="application/pdf">
+        <embed class="pdf-sizing mrgbot" [src]="pdfUrl" type="application/pdf">
       </div>  
 
     <!-- Letzte Interpretation soll einen größeren Abstand nach unten haben wegen footer -->
