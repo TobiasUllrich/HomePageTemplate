@@ -4,12 +4,13 @@
     width:100%;
 }
 
-main{
+.flexboxAndflexdirectioncolumn{
     display:flex;
-    flex-direction:column;  
+    flex-direction:column;
+    justify-content: space-around;  
 }
 
-img{
+.picSize{
     width:400px;
     margin-right:20px;
 }
@@ -38,6 +39,10 @@ img{
     margin-bottom:75px;
 }
 
+.mrgZero{
+    margin:0;
+}
+
 .logoAndText{
     display: flex;
 }
@@ -45,9 +50,10 @@ img{
 .boxLogo{
     height:100px;
     width:auto;
+    margin-right:20px;
 }
 
-.youTubeLogo:hover{
+.boxLogo:hover{
     cursor:pointer;
     transform: scale(1.2);
     transition: transform 330ms ease-in-out;
@@ -62,6 +68,11 @@ img{
     padding-right: 10px;
     background-color: white;
     border: solid 1px;
+}
+
+.buttonSizing{
+    display: flex;
+    justify-content: center;
 }
 
 .lastContainerOfPage{

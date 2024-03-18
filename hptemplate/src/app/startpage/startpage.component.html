@@ -1,34 +1,34 @@
 
-<main>
+<main class="flexboxAndflexdirectioncolumn">
 
         <!-- CONTAINER für Rubriken -->
         <ng-container *ngFor="let picture of pictures; let i = index">
 
            <!-- Um beim ersten Element des Arrays das Bild Rechts zu haben -->
            <div *ngIf="i == 0" class="containerDesign forContainerWithProfilePic">
-             <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}">
+             <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}" class="picSize">
              <div class="flexboxAndflexdirectioncolumn">
-               <h2>{{ caption[i] }}</h2>
+               <h2 class="mrgZero">{{ caption[i] }}</h2>
                <span>{{ text[i] }}</span>
-               <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
+               <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label" class="buttonSizing"></app-custombutton>
              </div>
           </div>
           <!-- Alle restlichen Bilder sollen links sein -->
           <div *ngIf="i !== 0 && i !== pictures.length-1" class="containerDesign">
-            <img src="assets/img/{{ picture }}">
+            <img src="assets/img/{{ picture }}" class="picSize">
             <div class="flexboxAndflexdirectioncolumn">
-              <h2>{{ caption[i] }}</h2>
+              <h2 class="mrgZero">{{ caption[i] }}</h2>
               <span>{{ text[i] }}</span>
-              <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
+              <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label" class="buttonSizing"></app-custombutton>
             </div>
          </div>
          <!-- Letztes Bild soll auch links sein, aber einen größeren Abstand nach unten haben wegen footer -->
          <div *ngIf="i == pictures.length-1" class="containerDesign mrgbot">
-         <img src="assets/img/{{ picture }}">
+         <img src="assets/img/{{ picture }}" class="picSize">
          <div class="flexboxAndflexdirectioncolumn">
-            <h2>{{ caption[i] }}</h2>
+            <h2 class="mrgZero">{{ caption[i] }}</h2>
             <span>{{ text[i] }}</span>
-            <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label"></app-custombutton>
+            <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label" class="buttonSizing"></app-custombutton>
           </div>
        </div>
 
@@ -49,7 +49,7 @@
       <div class="logoAndText">
         <!-- BILD NUR FALLS DER WERT IM ZUGEHÖRIGEN ARRAY KEIN LEERSTRING -->
         <ng-container *ngIf="picturesForInfoboxes[i]">
-          <img class="boxLogo" src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);">
+          <img src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);" class="boxLogo">
         </ng-container>
         <div class="textBoxStyle">{{ textForInfoboxes[i] }}</div>
       </div>    
@@ -68,7 +68,7 @@
       <div class="logoAndText">
         <!-- BILD NUR FALLS DER WERT IM ZUGEHÖRIGEN ARRAY KEIN LEERSTRING -->
         <ng-container *ngIf="picturesForInfoboxes[i]">
-          <img class="boxLogo" src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);">
+          <img src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);" class="boxLogo">
         </ng-container>
         <div class="textBoxStyle">{{ textForInfoboxes[i] }}</div>
       </div>    
