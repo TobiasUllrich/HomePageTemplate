@@ -1,7 +1,7 @@
 
 <main>
 
-    <div class="flexboxAndflexdirectioncolumn">
+        <!-- CONTAINER für Rubriken -->
         <ng-container *ngFor="let picture of pictures; let i = index">
 
            <!-- Um beim ersten Element des Arrays das Bild Rechts zu haben -->
@@ -33,32 +33,48 @@
        </div>
 
         </ng-container>
-    </div>
+    
 
-    <!-- Hinweis auf YouTube -->
-    <div class="noticeBoxYoutube mrgbot">
+
+    <!-- CONTAINER für Infoboxen -->
+    <ng-container *ngFor="let picture of picturesForInfoboxes; let i = index">
+
+    <!-- Alle Boxen bis auf die letzte -->  
+    <div *ngIf="i != picturesForInfoboxes.length-1" class="noticeBoxYoutube mrgbot">
       <!-- HEADER -->
-      <h1>Folge mir auf YouTube</h1>
+      <h1>{{ captionForInfoboxes[i] }}</h1>
       <!-- UNDERLINE -->
       <div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
       <!-- TEXT -->
       <div class="logoAndText">
-        <img class="youTubeLogo" src="assets/img/youtube.png" (click)="goToUrl('https://www.youtube.com/@EvolutionaereAstrologie');">
-        <div class="textBoxStyle">Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!</div>
+        <!-- BILD NUR FALLS DER WERT IM ZUGEHÖRIGEN ARRAY KEIN LEERSTRING -->
+        <ng-container *ngIf="picturesForInfoboxes[i]">
+          <img class="boxLogo" src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);">
+        </ng-container>
+        <div class="textBoxStyle">{{ textForInfoboxes[i] }}</div>
       </div>    
     </div>
 
-    <!-- Box mit Karte -->
-    <app-mapbox></app-mapbox>
+    <!-- Box mit Karte (Index angeben um diese Box irgendwo zwischenrein zu packen) -->
+    <app-mapbox *ngIf="i !==0"></app-mapbox>
 
-    <!-- Hinweis auf kein Ersatz für Arzt-->
-    <div class="lastContainerOfPage">
+    <!-- Letzte Box -->  
+    <div *ngIf="i == picturesForInfoboxes.length-1" class="lastContainerOfPage">
       <!-- HEADER -->
-      <h1>Information</h1>
+      <h1>{{ captionForInfoboxes[i] }}</h1>
       <!-- UNDERLINE -->
       <div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
       <!-- TEXT -->
-      <div class="textBoxStyle">Mit der Biodynamischen Cranio-Sacral-Therapie stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!</div>
+      <div class="logoAndText">
+        <!-- BILD NUR FALLS DER WERT IM ZUGEHÖRIGEN ARRAY KEIN LEERSTRING -->
+        <ng-container *ngIf="picturesForInfoboxes[i]">
+          <img class="boxLogo" src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);">
+        </ng-container>
+        <div class="textBoxStyle">{{ textForInfoboxes[i] }}</div>
+      </div>    
     </div>
+
+    </ng-container>
+
 
 </main>

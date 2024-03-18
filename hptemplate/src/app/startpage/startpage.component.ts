@@ -39,13 +39,40 @@ export class StartpageComponent {
     '/Astrologie',
    ];
 
+
+
+   picturesForInfoboxes: string[] =[
+    'youtube.png',
+    '',
+   ];
+
+   captionForInfoboxes: string[] =[
+    'Folge mir auf YouTube',
+    'Information',
+   ];
+
+   textForInfoboxes: string[] =[
+    'Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!',
+    'Mit der Biodynamischen Cranio-Sacral-Therapie stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
+   ];
+
+   routeForInfoboxes: string[] =[
+    'https://www.youtube.com/@EvolutionaereAstrologie',
+    '',
+   ];
+    
+
     /**
      * Labels for the customized Button
      */
     label = 'Mehr';
 
-
+    /**
+     * 
+     * @param url External Route to another Page
+     */
     goToUrl(url: string){
+      console.log(url);
       window.open(url, "_blank");
      }
 

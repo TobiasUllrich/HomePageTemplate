@@ -3,6 +3,11 @@
     color: var(--text-color-page);
 }
 
+.containerForPage{
+    display:flex;
+    flex-direction:column;  
+}
+
 h2{
     margin-top: 0 !important;
 }
@@ -24,4 +29,50 @@ img{
     justify-content: center;
     margin-top:75px;
     margin-bottom:75px;
+}
+
+.logoAndText{
+    display: flex;
+}
+
+.boxLogo{
+    height:200px;
+    width:auto;
+}
+
+.textBoxStyle{
+    display: flex;
+    flex:1;
+    align-items: center;
+    height: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border: solid 1px;
+}
+
+.picSizing{
+    height:100%;
+    object-fit: contain;
+}
+
+.completeCourseBox{
+    display:flex;
+    flex-direction: row-reverse;
+    margin-bottom:50px;
+}
+
+.boxSizeNormal{
+    height:500px;
+}
+
+.textboxForCourse{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+}
+
+.mrgbott{
+ margin-bottom:33px;
 }

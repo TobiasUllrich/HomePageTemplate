@@ -11,6 +11,10 @@
     border: solid 3px var(--background-color5); // Nur zum Debuggen -> Am Ende wieder entfernen
 }
 
+.containerForMainArea{
+    display:flex;
+}
+
 .routerDesign{
     background-color: var(--background-color2);
     display:flex;  //Erst jetzt bekommen alle Komponenten die vom router-outlet angesteuert werden Farbe
