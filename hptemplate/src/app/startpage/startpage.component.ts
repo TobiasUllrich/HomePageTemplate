@@ -72,7 +72,7 @@ export class StartpageComponent {
      * @param url External Route to another Page
      */
     goToUrl(url: string){
-      console.log(url);
+      //console.log(url);
       window.open(url, "_blank");
      }
 

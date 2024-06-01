@@ -9,7 +9,7 @@
 
     <!-- Erste Interpretation soll einen Abstand nach oben haben -->
     <div *ngIf="i == 0" class="styleOfInterpretation">
-        <h2>Beispiel {{ i+1 }}</h2>
+        <h2><u>Beispiel {{ i+1 }}</u></h2>
         <img src="assets/img/{{ nameOfImg[i] }}">
         <span class="styleOfTextblockUnderRadiximage">
             <b>Daten zur Radix:</b> <br>
@@ -21,7 +21,7 @@
 
     <!-- Alle Interpretationen außer die erste und die letze -->
     <div *ngIf="i !== 0 && i !== pdfUrls.length-1" class="styleOfInterpretation">
-        <h2>Beispiel {{ i+1 }}</h2>
+        <h2><u>Beispiel {{ i+1 }}</u></h2>
         <img src="assets/img/{{ nameOfImg[i] }}">
         <span class="styleOfTextblockUnderRadiximage">
             <b>Daten zur Radix:</b> <br>
@@ -33,7 +33,7 @@
 
     <!-- Letzte Interpretation soll einen größeren Abstand nach unten haben wegen footer -->
     <div *ngIf="i == pdfUrls.length-1" class="styleOfInterpretation forLastContainer">
-        <h2>Beispiel {{ i+1 }}</h2>
+        <h2><u>Beispiel {{ i+1 }}</u></h2>
         <img src="assets/img/{{ nameOfImg[i] }}">
         <span class="styleOfTextblockUnderRadiximage">
             <b>Daten zur Radix:</b> <br>
