@@ -31,4 +31,29 @@
 
   </nav>
 
+
+  <!--MOBILE MENU-->
+  <div class="open-mobile-menu" (click)="openMobileMenu()">
+    <img src="assets/img/header-menu.png">
+  </div>
+  <!--MOBILE MENU-->
+
+  <!--MOBILE MENU-->
+  <div id="header-mobile-menu" class="header-mobile-menu"> <!--ABSOLUTE-->
+    <div style="display:flex;justify-content:center;">
+        <img class="header-mobilelogo" src="assets/img/header-mobilelogo.png">
+        <div class="close-mobile-menu" (click)="closeMobileMenu()">
+            <img  id="upperLine" style="position:absolute;top:0;" src="assets/img/line.png">
+            <img  id="lowerLine" style="position:absolute;top:43px;" src="assets/img/line.png">
+        </div>
+    </div>
+    <a href="#aboutme" (click)="closeMobileMenu()">About me</a>
+    <a href="#skills" (click)="closeMobileMenu()">Skills set</a>
+    <a href="#mywork" (click)="closeMobileMenu()">My work</a>
+    <a href="#contact" (click)="closeMobileMenu()">Contact</a>
+  </div>
+<!--MOBILE MENU-->
+
+
+
 </div>
