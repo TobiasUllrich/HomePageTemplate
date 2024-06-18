@@ -129,8 +129,8 @@ constructor(){}
    * Opens the Mobile Menu from the right and plays the Cross-Symbol-Animation
    */
   openMobileMenu(){
-    (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.add('openMobileMenu');
-    (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.remove('closeMobileMenu');
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('openMobileMenu');
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('closeMobileMenu');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuDisolveCrossUpperLine');
     // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuDisolveCrossLowerLine');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuBuildCrossUpperLine');
@@ -141,8 +141,8 @@ constructor(){}
  * Closes the Mobile Menu from the right and plays the Cross-Symbol-Animation backwards
  */
   closeMobileMenu(){
-    (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.add('closeMobileMenu');
-    (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.remove('openMobileMenu'); 
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('closeMobileMenu');
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu'); 
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuBuildCrossUpperLine');
     // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuBuildCrossLowerLine');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuDisolveCrossUpperLine');
