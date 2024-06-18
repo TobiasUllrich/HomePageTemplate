@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { Observable, auditTime, debounceTime, from, interval, of, timeout } from 'rxjs';
+import { Observable, auditTime, debounceTime, from, interval, map, of, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-navmenu',
@@ -162,7 +162,8 @@ constructor(){}
     let test = of(1,2,3,4).subscribe((r) => console.log('Of-Observable: ' + r));
     let test2 = interval(1).pipe(auditTime(3000)).subscribe((r) => console.log('Interval-Observable: ' + r));
 
-    
+    test3: Observable;
+    const test3 = interval(1000).pipe(map(x => x*10));
 
     //test.unsubscribe();
     //test2.unsubscribe();

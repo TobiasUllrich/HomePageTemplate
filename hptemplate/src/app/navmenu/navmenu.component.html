@@ -1,5 +1,6 @@
 <div class="header-links">
 
+  <!--DESKTOP MENU-->
   <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav" id="{{'top' + i}}">
 
       <ng-container *ngIf="i!==indexOfPositionOfLogo">
@@ -30,22 +31,55 @@
       </ng-container>
 
   </nav>
+  <!--DESKTOP MENU-->
 
 
   <!--MOBILE MENU OPEN-->
   <div class="open-mobile-menu">
-    <button (click)="openMobileMenu()">open</button>
     <img (click)="openMobileMenu()" src="assets/img/header-menu.png">
   </div>
   <!--MOBILE MENU OPEN-->
 
 
-  <!--MOBILE MENU CLOSE-->
-  <nav id="mobile-menu" class="mobile-menu">
-    <button (click)="closeMobileMenu()">close</button>
-  </nav>
-  <!--MOBILE MENU CLOSE-->
 
+  <!--MOBILE MENU-->
+  <div id="mobile-menu" class="mobile-menu">
+
+    <button (click)="closeMobileMenu()">close</button>  
+
+    <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav transform-to-mobile" id="{{'top' + i}}">
+
+      <ng-container *ngIf="i!==indexOfPositionOfLogo">
+        <div class="main-box">
+          
+          <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
+          <span class="menu-point-to-hover" routerLink="{{ route }}">
+            <!--Hauptmenupunkt bekommt einen Pfeil, wenn es mindestens einen Untermenüpubkt gibt-->
+            <div id="{{'main' + i}}"> {{ display[i]}} </div> <div *ngIf="subMenuRoutes1[i]!==''" id="{{'arro' + i}}" class="arrowStyle">&rsaquo;</div>
+          </span>
+          <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
+
+         <!--Untermenupunkte-->
+         <div id="{{i}}" class="menu-subpoints d-none">
+          <!-- Jedes Array und das zugehörige Display-Array (Untermenü Ebene 1,2, ... 3) hier einfügen, dann wird immer mit der id des Main Menus gematcht -->
+             <nav id="{{'sub' + i + '1'}}" class="subpointStyle" routerLink="{{ subMenuRoutes1[i] }}"> {{ subMenuDisplay1[i] }} </nav>
+             <nav id="{{'sub' + i + '2'}}" class="subpointStyle" routerLink="{{ subMenuRoutes2[i] }}"> {{ subMenuDisplay2[i] }} </nav>
+             <nav id="{{'sub' + i + '3'}}" class="subpointStyle" routerLink="{{ subMenuRoutes3[i] }}"> {{ subMenuDisplay3[i] }} </nav>
+             <nav id="{{'inv' + i + '3'}}" class="invStyle"> invisible </nav>
+         </div>
+         <!--Untermenupunkte-->
+
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="i==indexOfPositionOfLogo"> <!-- Logo statt Wert aus dem Array -->
+          <img class="header-logo" src="assets/img/logo.png" href="/" routerLink="{{ route }}">
+      </ng-container>
+
+  </nav>
+
+  </div>
+  <!--MOBILE MENU-->
 
 
 
