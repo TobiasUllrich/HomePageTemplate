@@ -101,6 +101,8 @@
 /* Für Klappmenu */
 
 
+
+
 /* MOBILE ANSICHT */
 
 
@@ -153,51 +155,6 @@
       transform: translateX(100vw);
     }
   }
-  
-  /* buildCrossUpperLine-animation gets played */
-  .openMobileMenuBuildCrossUpperLine {
-    animation: buildCrossUpperLine 425ms ease-in-out;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes buildCrossUpperLine {
-    from {
-      transform: translateX(105px);
-    }
-  
-    to {
-      transform: scale(1.35) translateY(-9px) rotate(-41deg) translateX(-38px);
-    }
-  }
-  
-  /* buildCrossLowerLine-animation gets played */
-  .openMobileMenuBuildCrossLowerLine {
-    animation: buildCrossLowerLine 425ms ease-in-out;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes buildCrossLowerLine {
-    from {
-      transform: translateX(105px);
-    }
-  
-    to {
-        transform: scale(1.35) translateY(14px) rotate(41deg) translateX(-46px);
-    }
-  }
-  
-  .closeMobileMenuDisolveCrossUpperLine {
-    animation: buildCrossUpperLine 2000ms ease-in-out;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-  }
-  
-  .closeMobileMenuDisolveCrossLowerLine {
-    animation: buildCrossLowerLine 2000ms ease-in-out;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-  }
-
 
 
 
@@ -205,7 +162,8 @@
 
   .header-mobile-menu {
     position: absolute;
-    background-color: white;
+    //background-color: white;
+    background-color: green;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -214,7 +172,7 @@
     justify-content: center;
     transform: translateX(100vw);
     z-index: 2;
-  
+    
     a {
       text-decoration: none;
       font-size: 50px;
@@ -229,45 +187,18 @@
   }
   
   
-  
-  
-  .header-mobilelogo {
-    position: absolute;
-    width: 64px;
-    top: 21px;
-    left: 56px;
-    z-index: 3;
-  }
-  
-  
-  
-  
-  .close-mobile-menu {
-    position: absolute;
-    flex-direction: column;
-    top: 36px;
-    right: 61px;
-    cursor: pointer;
-    z-index: 1;
-  
-    img {
-      width: 50px;
-      padding-bottom: 10px;
-      filter: brightness(0.5);
-    }
-  }
 
+  
+  
+  
 
-
-
-/* MOBILE ANSICHT */
 
 
 
 
 
   @media (min-width:280px) and (max-width:900px) {
-
+    
     .open-mobile-menu {
         display: flex;
       }

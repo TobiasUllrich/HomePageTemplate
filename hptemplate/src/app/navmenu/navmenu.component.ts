@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Observable, auditTime, debounceTime, from, interval, of, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-navmenu',
@@ -130,10 +131,10 @@ constructor(){}
   openMobileMenu(){
     (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.add('openMobileMenu');
     (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.remove('closeMobileMenu');
-    (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuDisolveCrossUpperLine');
-    (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuDisolveCrossLowerLine');
-    (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuBuildCrossUpperLine');
-    (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuBuildCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuDisolveCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuDisolveCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuBuildCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuBuildCrossLowerLine');
   }
 
 /**
@@ -142,11 +143,32 @@ constructor(){}
   closeMobileMenu(){
     (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.add('closeMobileMenu');
     (<HTMLInputElement>document.getElementById('header-mobile-menu')).classList.remove('openMobileMenu'); 
-    (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuBuildCrossUpperLine');
-    (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuBuildCrossLowerLine');
-    (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuDisolveCrossUpperLine');
-    (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuDisolveCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuBuildCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuBuildCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuDisolveCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuDisolveCrossLowerLine');
   }
+
+
+
+
+  test?: Observable<Number>;
+
+  ngOnInit(){
+    this.probieren();
+  }
+
+  probieren(){
+    let test = of(1,2,3,4).subscribe((r) => console.log('Of-Observable: ' + r));
+    let test2 = interval(1).pipe(auditTime(3000)).subscribe((r) => console.log('Interval-Observable: ' + r));
+
+    
+
+    //test.unsubscribe();
+    //test2.unsubscribe();
+
+  }
+
 
 
 }
