@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Observable, auditTime, debounceTime, from, interval, map, of, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-navmenu',
@@ -121,5 +122,54 @@ constructor(){}
       for(let i=0;i<this.routes.length;i++){if(i != this.indexOfPositionOfLogo){(<HTMLInputElement>document.getElementById(i.toString())).classList.add('d-none')}};
     }
    }
+
+
+
+  /**
+   * Opens the Mobile Menu from the right and plays the Cross-Symbol-Animation
+   */
+  openMobileMenu(){
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('openMobileMenu');
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('closeMobileMenu');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuDisolveCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuDisolveCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuBuildCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuBuildCrossLowerLine');
+  }
+
+/**
+ * Closes the Mobile Menu from the right and plays the Cross-Symbol-Animation backwards
+ */
+  closeMobileMenu(){
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('closeMobileMenu');
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu'); 
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuBuildCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuBuildCrossLowerLine');
+    // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuDisolveCrossUpperLine');
+    // (<HTMLInputElement>document.getElementById('lowerLine')).classList.add('openMobileMenuDisolveCrossLowerLine');
+  }
+
+
+
+
+  test?: Observable<Number>;
+
+  ngOnInit(){
+    this.probieren();
+  }
+
+  probieren(){
+    let test = of(1,2,3,4).subscribe((r) => console.log('Of-Observable: ' + r));
+    let test2 = interval(1).pipe(auditTime(3000)).subscribe((r) => console.log('Interval-Observable: ' + r));
+
+    test3: Observable;
+    const test3 = interval(1000).pipe(map(x => x*10));
+
+    //test.unsubscribe();
+    //test2.unsubscribe();
+
+  }
+
+
 
 }
