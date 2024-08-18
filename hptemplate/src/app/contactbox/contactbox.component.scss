@@ -239,7 +239,7 @@
 #divForSendAnimation{
     position:absolute;
     top: calc(50% - 90px/2);
-    left: calc(50% - 210px/2);
+    left: calc(50% - 210px/2 + 55px); //+55px hinzugefügt, weil der Bestätigungsbutton sichtbar war
     background-color: #0B2A7A;
     color:white;
     font-size:28px;
