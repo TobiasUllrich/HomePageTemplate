@@ -31,3 +31,12 @@
     background-color: var(--background-color4);
     flex:2;
 }
+
+
+@media (min-width:280px) and (max-width:900px) {
+    
+    app-header {
+       height:100px;
+      }
+
+}

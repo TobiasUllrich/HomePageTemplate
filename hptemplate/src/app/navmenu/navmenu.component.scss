@@ -106,6 +106,14 @@ button{
   height:100px;
   font-size: 44px;
   color:#0B2A7A;
+
+  &:hover {
+    cursor:pointer;
+    // text-decoration: underline;
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+    font-weight: 750;
+  }
 }
 /* Für Klappmenu */
 

@@ -162,6 +162,12 @@ constructor(){}
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('closeMobileMenu');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu');
     
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+    
     // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('header-links-main-nav');
     // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('header-links-main-nav-mobile');
     
