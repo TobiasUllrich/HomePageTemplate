@@ -97,6 +97,16 @@
 .d-none{
     display:none;
 }
+
+button{
+  border: 0;
+  background: none;
+  border: none;
+  cursor:pointer;
+  height:100px;
+  font-size: 44px;
+  color:#0B2A7A;
+}
 /* Für Klappmenu */
 
 
@@ -197,6 +207,7 @@
 
       .header-links-main-nav {
         display: none;
+        height:11% !important;
       }
 
       .transform-to-mobile{
@@ -205,7 +216,15 @@
         text-align:center;
         margin-left:5px;
         margin-right:5px;
-        height:65%;
+        height:35%;
       }
+
+      .menu-subpoints{
+        width:100%;
+        position:absolute;
+        top:21px;
+        display:flex !important;
+        flex-direction:column;
+    }
 
   }

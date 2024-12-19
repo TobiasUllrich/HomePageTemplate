@@ -8,7 +8,7 @@
           
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
           <span class="menu-point-to-hover" routerLink="{{ route }}">
-            <!--Hauptmenupunkt bekommt einen Pfeil, wenn es mindestens einen Untermenüpubkt gibt-->
+            <!--Hauptmenupunkt bekommt einen Pfeil, wenn es mindestens einen Untermenüpunkt gibt-->
             <div id="{{'main' + i}}"> {{ display[i]}} </div> <div *ngIf="subMenuRoutes1[i]!==''" id="{{'arro' + i}}" class="arrowStyle">&rsaquo;</div>
           </span>
           <!--Hauptmenupunkt über den gehovert werden muss um die Unterpunkte zu sehen-->
@@ -45,7 +45,7 @@
   <!--MOBILE MENU-->
   <div id="mobile-menu" class="mobile-menu">
 
-    <button (click)="closeMobileMenu()">close</button>  
+    <button (click)="closeMobileMenu()">X</button>
 
     <nav *ngFor="let route of routes; let i = index" class="header-links-main-nav transform-to-mobile" id="{{'top' + i}}">
 

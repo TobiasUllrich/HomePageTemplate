@@ -96,7 +96,8 @@ constructor(){}
 
    @HostListener('document:mouseover', ['$event'])
     onDocumentHover(event: MouseEvent) {
-    let elementId: string = (event.target as Element).id;
+    
+      let elementId: string = (event.target as Element).id;
     //console.log('id: ',elementId); //Id des Elements, z.B. 'main1'
     //console.log('id erste 4 Stellen:', elementId.substring(0,4)); //Befindet sich der Mauszeiger über einem main-menü-punkt?
     //console.log('id nach ab 5ter Stelle:', elementId.substring(4,elementId.length)); //Id die nach 'main' kommt, bei 'main1' ist es '1'
@@ -121,6 +122,7 @@ constructor(){}
     if(elementId.substring(0,3) == 'inv' || elementId.substring(0,3) == 'top'){
       for(let i=0;i<this.routes.length;i++){if(i != this.indexOfPositionOfLogo){(<HTMLInputElement>document.getElementById(i.toString())).classList.add('d-none')}};
     }
+    
    }
 
 
@@ -131,6 +133,22 @@ constructor(){}
   openMobileMenu(){
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('openMobileMenu');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('closeMobileMenu');
+
+    // console.log('hallo klappmenü');
+    // console.log(window.innerWidth);
+    //   //Gehe durch das Array mit den Menü-Punkten
+    //   for(let i=0;i<3;i++){
+    //     console.log(`${i} ${(<HTMLInputElement>document.getElementById(`${i}`))}`);
+    //     //[1.1] Entferne 'd-none'-Klasse beim zugehörigen Untermenü, damit es sichtbar wird 
+    //       (<HTMLInputElement>document.getElementById(`${i}`)).classList.remove('d-none');
+    //       (<HTMLInputElement>document.getElementById(`${i}`)).classList.add('d-flex');
+    //     }
+
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('header-links-main-nav-mobile');
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('header-links-main-nav');
+
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('header-links-mobile');
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('header-links');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuDisolveCrossUpperLine');
     // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuDisolveCrossLowerLine');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuBuildCrossUpperLine');
@@ -142,7 +160,14 @@ constructor(){}
  */
   closeMobileMenu(){
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('closeMobileMenu');
-    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu'); 
+    (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu');
+    
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('header-links-main-nav');
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('header-links-main-nav-mobile');
+    
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('header-links');
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('header-links-mobile');
+
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.remove('openMobileMenuBuildCrossUpperLine');
     // (<HTMLInputElement>document.getElementById('lowerLine')).classList.remove('openMobileMenuBuildCrossLowerLine');
     // (<HTMLInputElement>document.getElementById('upperLine')).classList.add('openMobileMenuDisolveCrossUpperLine');
@@ -152,23 +177,22 @@ constructor(){}
 
 
 
-  test?: Observable<Number>;
+  // test?: Observable<Number>;
 
-  ngOnInit(){
-    this.probieren();
-  }
+  // ngOnInit(){
+  //   this.probieren();
+  // }
 
-  probieren(){
-    let test = of(1,2,3,4).subscribe((r) => console.log('Of-Observable: ' + r));
-    let test2 = interval(1).pipe(auditTime(3000)).subscribe((r) => console.log('Interval-Observable: ' + r));
+  // probieren(){
+  //   let test = of(1,2,3,4).subscribe((r) => console.log('Of-Observable: ' + r));
+  //   let test2 = interval(1).pipe(auditTime(3000)).subscribe((r) => console.log('Interval-Observable: ' + r));
 
-    test3: Observable;
-    const test3 = interval(1000).pipe(map(x => x*10));
+  //   test3: Observable;
+  //   const test3 = interval(1000).pipe(map(x => x*10));
 
-    //test.unsubscribe();
-    //test2.unsubscribe();
-
-  }
+  //   //test.unsubscribe();
+  //   //test2.unsubscribe();
+  // }
 
 
 
