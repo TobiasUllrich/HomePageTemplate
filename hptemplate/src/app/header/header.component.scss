@@ -11,6 +11,13 @@ header{
       width:100%;
 }
 
+.hdr100vh{
+   height:100vh;
+}
+
+.posfxd{
+      position:fixed;
+   }
 
 @media (min-width:280px) and (max-width:900px) {
     
@@ -18,8 +25,8 @@ header{
             height:100vh;
       }
       header{
-            height:100vh;
-            position:fixed;
+            height:100px;
+            //position:fixed;
             z-index:21;
       }
   

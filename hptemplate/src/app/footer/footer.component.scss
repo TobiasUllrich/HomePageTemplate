@@ -36,8 +36,39 @@ h1{
 
 nav{
     cursor:pointer;
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+    font-weight: 700;
+    font-size: large;
 }
 
 app-iconbox{
     height:50px; //Notwendig um die iconbox richtig zu dimensionieren
 }
+
+@media (min-width:500px) and (max-width:900px) {
+    footer{
+        flex-direction: column-reverse;
+        height:330px;
+        justify-content: space-evenly;
+    }
+    .sizingLogoBox{
+        text-align: center;
+    }
+
+  }
+
+  @media (min-width:280px) and (max-width:499px) {
+    footer{
+        flex-direction: column-reverse;
+        height:330px;
+        justify-content: space-evenly;
+    }
+    .sizingLogoBox{
+        text-align: center;
+    }
+    h1{
+        font-size:40px;
+    }
+
+  }

@@ -98,6 +98,10 @@
     display:none;
 }
 
+// .height10vh{
+//   height:10vh !important;
+// }
+
 button{
   border: 0;
   background: none;
@@ -205,6 +209,14 @@ button{
       transform: translateX(100vw);
     }
   }
+
+
+
+@media (min-width:900px) and (max-width:1200px) {
+  .main-box{
+    width:110px;
+}
+}
 
 
   @media (min-width:280px) and (max-width:900px) {

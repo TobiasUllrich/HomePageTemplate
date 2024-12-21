@@ -96,6 +96,10 @@ body{
     background-color: #F4F4F4; //Hintergrundfarbe
 }
 
+app-root{
+  overflow-x: hidden;
+}
+
 @font-face {
     font-family: 'SelbstHeruntergeladeneSchriftart';
     src: url('/assets/fonts/marvel-v16-latin-regular.woff2') format('woff2');

@@ -1,4 +1,4 @@
 <!--Semantisches HTML-Tag-->
-<header> 
-  <app-navmenu></app-navmenu>
+<header id="hdr"> 
+  <app-navmenu (notifyParentClosed)="getNotificationClosed($event)" (notifyParentOpened)="getNotificationOpened($event)"></app-navmenu>
 </header>

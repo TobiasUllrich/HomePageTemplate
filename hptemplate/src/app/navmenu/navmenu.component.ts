@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { Observable, auditTime, debounceTime, from, interval, map, of, timeout } from 'rxjs';
 
 @Component({
@@ -94,6 +94,16 @@ export class NavmenuComponent {
 constructor(){}
 
 
+@Output() notifyParentClosed: EventEmitter<any> = new EventEmitter();
+sendMenuClosedNotification() {
+    this.notifyParentClosed.emit('Some value to send to the parent');
+}
+
+@Output() notifyParentOpened: EventEmitter<any> = new EventEmitter();
+sendMenuOpenedNotification() {
+    this.notifyParentOpened.emit('Some value to send to the parent');
+}
+
    @HostListener('document:mouseover', ['$event'])
     onDocumentHover(event: MouseEvent) {
     
@@ -131,6 +141,8 @@ constructor(){}
    * Opens the Mobile Menu from the right and plays the Cross-Symbol-Animation
    */
   openMobileMenu(){
+    console.log('OPEN');
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('height10vh');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('openMobileMenu');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('closeMobileMenu');
 
@@ -159,10 +171,12 @@ constructor(){}
  * Closes the Mobile Menu from the right and plays the Cross-Symbol-Animation backwards
  */
   closeMobileMenu(){
+    console.log('CLOSE');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('closeMobileMenu');
     (<HTMLInputElement>document.getElementById('mobile-menu')).classList.remove('openMobileMenu');
-    
-    window.scroll({ 
+    // (<HTMLInputElement>document.getElementById('mobile-menu')).classList.add('height10vh');
+
+    window.scroll({
       top: 0, 
       left: 0, 
       behavior: 'smooth' 
