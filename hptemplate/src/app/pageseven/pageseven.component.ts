@@ -106,8 +106,8 @@ export class PagesevenComponent {
    ];
 
    coursePrice: string[] =[
-    '390€',
-    '200€',
+    '511€',
+    '250€',
     '12€',
     '50€',
     '50€',

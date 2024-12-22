@@ -33,6 +33,7 @@
     display: flex;
     flex-direction: column;
     width: 33%;
+    margin-right: 20px;
 }
 
 .contact-form {
@@ -268,6 +269,111 @@
       opacity:0;
     }
 }
+
+
+@media (min-width:625px) and (max-width:800px) {
+
+    .contact-textandform{
+        flex-direction: column;
+    }
+    .contact-text{
+        width:100%;
+        margin-right: unset;
+    }
+
+    .contact-form{
+        width:100%;
+    }
+
+    .contact-container{
+        width: 97%;
+    }
+
+    #divForSendAnimation{
+        top: calc(234px + 122px + 10px); //Zeilen von Klasse "contact-text" sind entscheidend; 10px sind Puffer
+        left: 10px; //10px sind Puffer
+    }
+}
+
+
+
+@media (min-width:486px) and (max-width:624px) {
+
+    .contact-textandform{
+        flex-direction: column;
+    }
+    .contact-text{
+        width:100%;
+        margin-right: unset;
+    }
+
+    .contact-form{
+        width:100%;
+    }
+
+    .contact-container{
+        width: 97%;
+    }
+
+    #divForSendAnimation{
+        top: calc(234px + 168px + 10px); //Zeilen von Klasse "contact-text" sind entscheidend; 10px sind Puffer
+        left: 10px; //10px sind Puffer
+    }
+
+}
+
+@media (min-width:347px) and (max-width:485px) {
+
+
+    .contact-textandform{
+        flex-direction: column;
+    }
+    .contact-text{
+        width:100%;
+        margin-right: unset;
+    }
+
+    .contact-form{
+        width:100%;
+    }
+
+    .contact-container{
+        width: 97%;
+    }
+
+    #divForSendAnimation{
+        top: calc(234px + 214px + 10px); //Zeilen von Klasse "contact-text" sind entscheidend; 10px sind Puffer
+        left: 10px; //10px sind Puffer
+    }
+
+}
+
+@media (min-width:280px) and (max-width:346px) {
+
+    .contact-textandform{
+        flex-direction: column;
+    }
+    .contact-text{
+        width:100%;
+        margin-right: unset;
+    }
+
+    .contact-form{
+        width:100%;
+    }
+
+    .contact-container{
+        width: 97%;
+    }
+
+    #divForSendAnimation{
+        top: calc(234px + 260px + 10px); //Zeilen von Klasse "contact-text" sind entscheidend; 10px sind Puffer
+        left: 10px; //10px sind Puffer
+    }
+
+}
+
+
 
 
 // @media (min-width:1451px) and (max-width:1550px) {
@@ -547,3 +653,4 @@
 //         margin-bottom: 40px;
 //     }
 // }
+

@@ -4,6 +4,8 @@ h2{
 
 img{
     width:250px;
+    object-fit:contain;
+    background-color: white;
 }
 
 .bio-container{
@@ -35,4 +37,36 @@ a{
   align-items: center;
   margin-top:50px;
   margin-bottom:50px;
+}
+
+
+@media (min-width:500px) and (max-width:800px) {
+
+    .bio-container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .padlft{
+        padding-left: unset;
+    }
+}
+
+
+@media (min-width:280px) and (max-width:499px) {
+
+    .bio-container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+
+     h2{
+        font-size:30px;
+     }
+
+     .padlft{
+        padding-left: 10px;
+    }
 }

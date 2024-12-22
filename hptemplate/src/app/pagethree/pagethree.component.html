@@ -6,8 +6,8 @@
 <!-- UNDERLINE -->
 <div style="width:50px;margin-bottom:50px;border:3px solid;"></div>
 
-<h2>Es ist nicht genug zu wissen, man muß auch anwenden; es ist nicht genug zu wollen, man muß auch tun.
-  Johann Wolfgang von Goethe (1749 - 1832)</h2>
+<h2>"Es ist nicht genug zu wissen, man muß auch anwenden; es ist nicht genug zu wollen, man muß auch tun."
+  - Johann Wolfgang von Goethe (1749 - 1832)</h2>
 
 
 
@@ -15,24 +15,35 @@
 
     <!-- Ersten beiden Array-Punkte sind komplette Kurse -->
     <div *ngIf="i <= 1" class="completeCourseBox">
-        <div class="d-flex">
-          <!-- TITLE & DESCRIPTION -->
-          <div class="flexone textboxForCourse">
-            <h3 class="mrgZero">{{ courseName[i] }}</h3>
-            <span class="mrgbotttop"> {{ courseText[i] }} </span>
-            <span class="mrgbott">
+        <div class="textboxForCourse">
+
+          <!-- TITLE -->
+          <h3 class="mrgbott txtalcent">{{ courseName[i] }}</h3>
+
+          <div class="flexone textboxForCourse2">
+
+            <!-- DESCRIPTION -->
+             <div class="textboxForCourse">
+              <span class="mrgbott"> {{ courseText[i] }} </span>
+              <span class="mrgbott">
                 <b>• Inhalt: </b>{{ courseContent[i] }} <br>
                 <b>• Dauer: </b> {{ courseTime[i] }} <br>
-                <b>• Preis: </b> {{ coursePrice[i] }}
-            </span>
+                <b>• Preis: </b> {{ coursePrice[i] }} <br>
+                <b style="color:red">• Special: </b> <span style="color:darkgreen">{{ courseSpecial[i] }}</span>
+              </span>
+             </div>
+            
+            <!-- PICTURE -->
+            <img src="assets/img/{{ courseImg }}" class="picSize">
           </div>
-          <!-- PICTURE -->
-          <img class="picSizing"  src="assets/img/{{ courseImg }}" class="picSize">
+
+
+
         </div>
 
         <!-- BUTTONS -->
         <div class="buttons">
-          <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label2"></app-custombutton>
+          <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label2" class="buybutton"></app-custombutton>
           <app-custombutton (click)="goToUrl('https://ullrichtobias.gurucan.com/')" [buttonText]="label3"></app-custombutton>
         </div>
     </div>

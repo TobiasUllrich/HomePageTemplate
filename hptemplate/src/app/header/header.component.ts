@@ -12,7 +12,13 @@ export class HeaderComponent {
   getNotificationClosed(evt: any) {
       // Do something with the notification (evt) sent by the child!
       console.log('CLOSSSSSSSEEEEEDDDDDDDDD');
-      (<HTMLInputElement>document.getElementById('hdr')).classList.remove('hdr100vh');
+
+      //Sorgt dafür, dass das Menü nicht schon beim Einklappen seine ganze Höhe verliert
+      setTimeout(function(){
+        (<HTMLInputElement>document.getElementById('hdr')).classList.remove('hdr100vh');
+       }, 500);
+
+
       (<HTMLInputElement>document.getElementById('hdr')).classList.remove('posfxd');
   }
 

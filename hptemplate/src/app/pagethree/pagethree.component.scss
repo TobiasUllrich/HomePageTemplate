@@ -1,3 +1,7 @@
+:host{
+    width:100%;
+}
+
 .containerForPage{
     display:flex;
     flex-direction:column;  
@@ -8,10 +12,17 @@ h2{
     margin-bottom: 75px;
 }
 
+h3{
+    font-size:40px;
+}
+
 .picSize{
     width:400px;
     margin-left:20px;
+    object-fit: contain;
+    background-color: white;
 }
+
 
 .explanation-container{
  display:flex;
@@ -19,6 +30,10 @@ h2{
 
 .flexone{
     flex:1;
+}
+
+.txtalcent{
+    text-align: center;
 }
 
 .lastContainerOfPage{
@@ -45,19 +60,12 @@ h2{
 }
 
 .textBoxStyle{
-    display: flex;
-    flex:1;
-    align-items: center;
-    height: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: unset;
+    width:100%;
+    word-wrap:break-word;
+    padding: 10px;
     background-color: white;
     border: solid 1px;
-}
-
-.picSizing{
-    height:100%;
-    object-fit: contain;
 }
 
 .completeCourseBox{
@@ -68,21 +76,23 @@ h2{
 
 .buttons{
     display:flex;
+    justify-content: space-evenly;
+    margin-top:50px;
 }
 
 .textboxForCourse{
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.textboxForCourse2{
+    display:flex;
     justify-content: flex-start;
 }
 
 .mrgbott{
- margin-bottom:33px;
-}
-
-.mrgbotttop{
-    margin-top:25px;
-    margin-bottom:25px;
+    margin-bottom:33px;
 }
 
 .mrgZero{
@@ -91,4 +101,39 @@ h2{
 
 .d-flex{
     display: flex;
+}
+
+
+@media (min-width:280px) and (max-width:800px) {
+
+    .textboxForCourse2{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .logoAndText{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxLogo{
+        height:unset;
+        width:100%;
+        margin-right:unset;
+        margin-bottom:33px;
+    }
+
+    .picSize{
+        margin-left: unset;
+        width: 90%;
+    }
+
+    .buttons{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .buybutton{
+       margin-bottom: 25px;
+    }
 }

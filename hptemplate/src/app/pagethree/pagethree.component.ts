@@ -53,11 +53,14 @@ export class PagethreeComponent {
     ]
 
     coursePrice: string[] =[
-      '390€',
-      '200€',
+      '511€',
+      '250€',
     ]
 
-
+    courseSpecial: string[] =[
+      'Telegram-Gruppe begleitend zum Kurs.',
+      'Basis-Kurs + Live-Kurs für 600€.',
+    ]
 
 
     picturesForInfoboxes: string[] =[
@@ -71,8 +74,8 @@ export class PagethreeComponent {
      textForInfoboxes: string[] =[
       'Für den Video-Kurs einfach hier (https://ullrichtobias.gurucan.com/) mit E-Mail & Passwort registrieren und bequem per PayPal bezahlen.' +
       'Bei Fragen & Anregungen zu den Kursen meldet euch gerne bei mir.' +
-      'Herzliche Grüße' +
-      'Tobias Ullrich',
+      ' Herzliche Grüße' +
+      ' Tobias Ullrich',
      ];
   
      routeForInfoboxes: string[] =[

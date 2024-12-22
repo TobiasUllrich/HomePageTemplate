@@ -58,7 +58,7 @@ app-iconbox{
 
   }
 
-  @media (min-width:280px) and (max-width:499px) {
+  @media (min-width:350px) and (max-width:499px) {
     footer{
         flex-direction: column-reverse;
         height:330px;
@@ -69,6 +69,21 @@ app-iconbox{
     }
     h1{
         font-size:40px;
+    }
+
+  }
+
+  @media (min-width:280px) and (max-width:349px) {
+    footer{
+        flex-direction: column-reverse;
+        height:330px;
+        justify-content: space-evenly;
+    }
+    .sizingLogoBox{
+        text-align: center;
+    }
+    h1{
+        font-size:30px;
     }
 
   }

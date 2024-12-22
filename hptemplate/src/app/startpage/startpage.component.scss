@@ -76,3 +76,125 @@
 .lastContainerOfPage{
     margin-bottom:150px; 
 }
+
+span{
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+
+@media (min-width:350px) and (max-width:800px) {
+
+:host{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}    
+    
+h2{
+    font-size:40px;
+    margin-top:25px !important;
+}
+
+.flexboxAndflexdirectioncolumn {
+    width: 90%;
+}
+
+.forContainerWithProfilePic{
+    flex-direction:column-reverse;
+    align-items:center;
+}
+
+.containerDesign{
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align:center;
+}
+
+.picSize{
+    width:90%;
+    margin-right: unset;
+    margin-top:25px;
+}
+
+.logoAndText{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBoxStyle{
+    padding:10px;
+    text-align:center;
+}
+
+.boxLogo{
+    margin-bottom: 20px;
+    margin-right:unset;
+}
+
+app-custombutton{
+    margin-bottom:25px;
+}
+
+}
+
+@media (min-width:280px) and (max-width:349px) {
+
+    :host{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+    }    
+        
+    h2{
+        font-size:30px;
+        margin-top:25px !important;
+    }
+    
+    .flexboxAndflexdirectioncolumn {
+        width: 90%;
+    }
+    
+    .forContainerWithProfilePic{
+        flex-direction:column-reverse;
+        align-items:center;
+    }
+    
+    .containerDesign{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align:center;
+    }
+    
+    .picSize{
+        width:90%;
+        margin-right: unset;
+        margin-top:25px;
+    }
+    
+    .logoAndText{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .textBoxStyle{
+        padding:10px;
+        text-align:center;
+    }
+    
+    .boxLogo{
+        margin-bottom: 20px;
+        margin-right:unset;
+    }
+    
+    app-custombutton{
+        margin-bottom:25px;
+    }
+    
+    }

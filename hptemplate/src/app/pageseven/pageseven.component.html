@@ -9,8 +9,8 @@
     <div *ngIf="i == 0" style="width:50px;margin-bottom:50px;border:3px solid;"></div> 
 
     <!-- Ersten beiden Array-Punkte sind komplette Kurse -->
-    <div *ngIf="i <= 1" class="completeCourseBox boxSizeNormal">
-        <div> 
+    <div *ngIf="i <= 1" class="completeCourseBox">
+        <div class="picContainer"> 
             <img class="picSizing"  src="assets/img/{{ courseImg }}">
         </div>
 
@@ -25,19 +25,19 @@
         </div>  
     </div>
 
-    <!-- Wird als Überschrift vor den einzelnen Kapiteln angezeigt angezeigt -->   
+    <!-- Wird als Überschrift vor den einzelnen Kapiteln angezeigt -->   
     <h1 *ngIf="i == 2">Einzelne Kapitel</h1>
     <!-- UNDERLINE -->
     <div *ngIf="i == 2" style="width:50px;margin-bottom:50px;border:3px solid;"></div> 
     
     <!-- Der Rest im Array besteht aus einzelnen Kapiteln -->
-    <!-- Einmal mein Video-Kurs -->
-    <div *ngIf="i > 1 && i < 10" class="completeCourseBox boxSizeBigger">
-        <div> 
+    <!-- Einmal mein Video-Kurs ab Index 2 -->
+    <div *ngIf="i > 1 && i < 10" class="completeCourseBox">
+        <div class="picContainer"> 
             <img class="picSizing"  src="assets/img/{{ courseImg }}">
         </div>
 
-        <div class="flexone textboxForCourse" style="margin-left:24px;">
+        <div class="flexone textboxForCourse mrglft24">
             <h3>{{ courseName[i] }}</h3>
             <span class="mrgbott">
                 <b>• Inhalt: </b>{{ courseContent[i] }} <br>
@@ -48,14 +48,14 @@
         </div>  
     </div>
 
-    <!-- Einmal mein Live-Kurs (hier wird die Nummer des Calls über das Bild gelegt) -->
-    <div *ngIf="i > 9" class="completeCourseBox boxSizeBigger">
-        <div class="posrel">
+    <!-- Einmal mein Live-Kurs ab Index 10 (hier wird die Nummer des Calls über das Bild gelegt) -->
+    <div *ngIf="i > 9" class="completeCourseBox">
+        <div class="posrel picContainer">
             <img class="picSizing"  src="assets/img/{{ courseImg }}">
             <span class="textOverPic"><b>{{ i-9 }} . Call</b></span>
         </div>
 
-        <div class="flexone textboxForCourse" style="margin-left:24px;">
+        <div class="flexone textboxForCourse mrglft24">
             <h3>{{ courseName[i] }}</h3>
             <span class="mrgbott">
                 <b>• Inhalt: </b>{{ courseContent[i] }} <br>

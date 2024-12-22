@@ -1,3 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .Impressum {
     display: flex;
     flex-direction: column;
@@ -13,4 +20,48 @@
 
 .mrgbot{
     margin-bottom:50px;
+}
+
+@media (min-width:300px) and (max-width:499px) {
+    :host {
+        width:90%;
+    }
+    
+    .Impressum {
+        width:100%;
+    }
+
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  span{
+    font-size: 20px;
+    width:90%;
+    word-wrap:break-word;
+  }
+}
+
+@media (min-width:280px) and (max-width:299px) {
+    :host {
+        width:90%;
+    }
+    
+    .Impressum {
+        width:100%;
+    }
+
+  h1{
+    font-size: 35px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  span{
+    font-size: 20px;
+    width:90%;
+    word-wrap:break-word;
+  }
 }
