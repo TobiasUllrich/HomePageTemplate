@@ -1,6 +1,6 @@
 :host{
     font-size: 18px;
-    font-weight: bold;   /* equals 700 */
+    font-weight: bold;  /* = 700 */
     height:100%;
 }
 
@@ -49,7 +49,6 @@
 }
 .main-box:hover{
     cursor:pointer;
-    // text-decoration: underline;
     transform: scale(1.1);
     transition: transform 330ms ease-in-out;
     font-weight: 1000;
@@ -83,9 +82,6 @@
 
 .subpointStyle{
     margin:0 !important;
-    // border-left: 1px solid black;
-    // border-right: 1px solid black;
-    // border-bottom: 1px solid black;
     font-size:14px;
     cursor:pointer;
 }
@@ -98,10 +94,6 @@
     display:none;
 }
 
-// .height10vh{
-//   height:10vh !important;
-// }
-
 button{
   border: 0;
   background: none;
@@ -113,7 +105,6 @@ button{
 
   &:hover {
     cursor:pointer;
-    // text-decoration: underline;
     transform: scale(1.1);
     transition: transform 330ms ease-in-out;
     font-weight: 750;
@@ -124,18 +115,8 @@ button{
 
 
 
-
-
-
-
-
-
-
-
-
 .mobile-menu {
   position: absolute;
-  //background-color: white;
   background-color: #F4F4F4; //Hintergrundfarbe
   width: 100vw;
   height: 100vh;
@@ -150,7 +131,6 @@ button{
     text-decoration: none;
     font-size: 50px;
     margin: 30px;
-    //color: $base-color;
 
     &:hover {
       transform: translateX(5px);
@@ -212,12 +192,12 @@ button{
 
 
 
+
 @media (min-width:900px) and (max-width:1200px) {
   .main-box{
     width:110px;
 }
 }
-
 
   @media (min-width:280px) and (max-width:900px) {
     
