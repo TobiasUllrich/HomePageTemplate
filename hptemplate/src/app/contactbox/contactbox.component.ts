@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment'; //environment.development (localhost) ODER environment angeben (domain)
 
 
 @Component({

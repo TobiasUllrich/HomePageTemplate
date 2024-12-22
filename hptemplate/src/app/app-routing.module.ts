@@ -15,9 +15,9 @@ import { PagesevenComponent } from './pageseven/pageseven.component';
 const routes: Routes = [
 { path: '', component: StartpageComponent }, //https://ullrich-tobias.de/
 
-{ path: 'Impressum', component: ImpressumComponent },  
-{ path: 'Kontakt', component: ContactComponent }, 
-{ path: 'UeberMich', component: PagefourComponent }, 
+{ path: 'Impressum', component: ImpressumComponent },
+{ path: 'Kontakt', component: ContactComponent },
+{ path: 'UeberMich', component: PagefourComponent },
 
 { path: 'Astrologie', component: PageoneComponent },
 { path: 'Cranio-Sacral', component: PagetwoComponent},
