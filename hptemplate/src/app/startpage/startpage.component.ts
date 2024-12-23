@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-startpage',
@@ -6,6 +7,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './startpage.component.scss'
 })
 export class StartpageComponent {
+
+  constructor(private titleService:Title) { this.titleService.setTitle("Tobias Ullrich"); }
 
   pictures: string[] =[
     'Tobias-Ullrich.jpg',

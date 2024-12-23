@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pagefive',
@@ -35,9 +36,9 @@ export class PagefiveComponent implements OnInit {
   pdfUrls: SafeResourceUrl[] = [];
   
   
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private titleService:Title) { this.titleService.setTitle("Evolutionäre Astrologie | Horoskope"); }
   
-  
+
   ngOnInit(): void {
     this.nameOfPdf.forEach(pdfName => {
       const pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(`assets/pdf/${pdfName}.pdf#toolbar=0&zoom=FitH`);

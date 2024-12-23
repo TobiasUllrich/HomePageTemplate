@@ -50,10 +50,16 @@ h3{
 .boxLogo{
     height:200px;
     width:auto;
-    margin-right:20px;
 }
 
-.boxLogo:hover{
+.boxForLogo{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.boxForLogo:hover{
     cursor:pointer;
     transform: scale(1.1);
     transition: transform 330ms ease-in-out;
@@ -119,10 +125,12 @@ h3{
     .boxLogo{
         height:unset;
         width:100%;
-        margin-right:unset;
         margin-bottom:33px;
     }
-
+    .boxForLogo{
+        margin-right:unset;
+        margin-bottom: 33px;
+    }
     .picSize{
         margin-left: unset;
         width: 90%;

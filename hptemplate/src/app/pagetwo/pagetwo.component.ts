@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pagetwo',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PagetwoComponent {
 
-  constructor(private router: Router) { } 
+  constructor(private router: Router, private titleService:Title) { this.titleService.setTitle("Cranio-Sacral-Therapie"); } 
 
     /**
      * Labels for the customized Button

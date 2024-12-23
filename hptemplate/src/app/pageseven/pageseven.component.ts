@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pageseven',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './pageseven.component.scss'
 })
 export class PagesevenComponent {
+
+  constructor(private titleService:Title) { this.titleService.setTitle("Evolutionäre Astrologie | Kursinhalte"); }
 
   courseImgs: string[] =[
     'kurs1.jpg',

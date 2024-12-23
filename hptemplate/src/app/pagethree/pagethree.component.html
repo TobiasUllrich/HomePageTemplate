@@ -44,6 +44,7 @@
         <!-- BUTTONS -->
         <div class="buttons">
           <app-custombutton (click)="goToUrl(linkToCourse[i])" [buttonText]="label2" class="buybutton"></app-custombutton>
+          <app-custombutton routerLink="/Kurse/Kursinhalte" [buttonText]="label4" class="buybutton"></app-custombutton>
           <app-custombutton (click)="goToUrl('https://ullrichtobias.gurucan.com/')" [buttonText]="label3"></app-custombutton>
         </div>
     </div>
@@ -65,7 +66,9 @@
         <div class="logoAndText">
           <!-- BILD NUR FALLS DER WERT IM ZUGEHÖRIGEN ARRAY KEIN LEERSTRING -->
           <ng-container *ngIf="picturesForInfoboxes[i]">
-            <img src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);" class="boxLogo">
+            <div class="boxForLogo">
+              <img src="assets/img/{{ picture }}" (click)="goToUrl(routeForInfoboxes[i]);" class="boxLogo">
+            </div>
           </ng-container>
           <div class="textBoxStyle">{{ textForInfoboxes[i] }}</div>
         </div>    

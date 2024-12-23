@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pagesix',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './pagesix.component.scss'
 })
 export class PagesixComponent {
+
+constructor(private titleService:Title) { this.titleService.setTitle("Cranio-Sacral-Therapie | Diplomarbeit"); }
 
 }

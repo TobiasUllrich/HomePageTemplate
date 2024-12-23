@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pagethree',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PagethreeComponent {
 
-  constructor(private router: Router) { } 
+  constructor(private router: Router, private titleService:Title) { this.titleService.setTitle("Evolutionäre Astrologie | Kurse"); } 
 
     /**
      * Labels for the customized Button
@@ -16,6 +17,7 @@ export class PagethreeComponent {
     label = 'Kontaktiere mich';
     label2 = 'Kurs kaufen';
     label3 = 'Video zum Kurs';
+    label4 = 'Einzelne Kapitel';
 
 
 
