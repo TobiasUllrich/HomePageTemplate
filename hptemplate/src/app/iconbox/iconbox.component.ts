@@ -11,7 +11,7 @@ export class IconboxComponent {
     'youtube.png',
     'facebook.png',
     'telegram.png',
-    // 'instagram',
+    'instagram.png',
     // 'twitter',
     // 'tik-tok'
    ]; 
@@ -19,7 +19,7 @@ export class IconboxComponent {
      'https://www.youtube.com/@EvolutionaereAstrologie',
      'https://www.facebook.com/UllrichTobias',
      'https://t.me/Evolutionary_Astrology',
-    //  'https://www.instagram.com/tobiasulli/',
+     'https://www.instagram.com/evolutionary_astrology_/',
     //  'twitter',
     //  'tik-tok'
     ]; 
