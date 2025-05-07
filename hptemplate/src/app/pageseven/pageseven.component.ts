@@ -30,8 +30,8 @@ export class PagesevenComponent {
    ];
 
    courseName: string[] =[
-    'Video-Kurs: Evolutionäre Astrologie',
-    'Live-Kurs: Deute dein Leben',
+    'Evolutionäre Astrologie I',
+    'Evolutionäre Astrologie II',
     '1. Evolutionäre Astrologie',
     '2. Planeten unseres Sonnensystems',
     '3. Astronomische Grundlagen',
@@ -72,7 +72,7 @@ export class PagesevenComponent {
 
    courseContent: string[] =[
     '8 Kapitel inklusive Übungsaufgaben',
-    'Aufzeichnungen 4 Live-Calls + viel Praxis',
+    'Aufzeichnungen 6 Live-Calls mit viel Praxis',
     'Wie funktioniert Astrologie?, Warum sollte man sich mit Astrologie beschäftigen?, Was sind die Gefahren der Astrologie?, Was ist Evolutionäre Astrologie? + Übungsaufgaben',
     'Sonne, Merkur, Venus, Erde, Mond, Mondknoten, Mars, Jupiter, Saturn, Chiron, Uranus, Neptun, Pluto + Übungsaufgaben',
     'Entstehung des Tierkreises, Entstehung der AC-DC-Achse, Entstehung der MC-IC-Achse, Präzession, Bewegungen in der Radix + Übungsaufgaben',
