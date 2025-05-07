@@ -16,14 +16,15 @@ export class PagethreeComponent {
      */
     label = 'Kontaktiere mich';
     label2 = 'Kurs kaufen';
-    label3 = 'Video zum Kurs';
+    label3 = 'Video & Login';
     label4 = 'Einzelne Kapitel';
+    label5 = 'Login';
 
 
 
     courseName: string[] =[
-      'Video-Kurs: Evolutionäre Astrologie',
-      'Live-Kurs: Deute dein Leben',
+      'Evolutionäre Astrologie I',
+      'Evolutionäre Astrologie II',
     ]
 
     courseImgs: string[] =[
@@ -46,7 +47,7 @@ export class PagethreeComponent {
 
     courseContent: string[] =[
       '8 Kapitel inklusive Übungsaufgaben',
-      'Aufzeichnungen 4 Live-Calls + viel Praxis',
+      'Aufzeichnungen 6 Live-Calls mit viel Praxis',
     ]
 
     courseTime: string[] =[
@@ -60,8 +61,8 @@ export class PagethreeComponent {
     ]
 
     courseSpecial: string[] =[
-      'Telegram-Gruppe begleitend zum Kurs.',
-      'Basis-Kurs + Live-Kurs für 600€.',
+      'Schreib mich an und erhalte 50€ Rabatt.',
+      'Schreib mich an und erhalte EA I+II für 600€.',
     ]
 
 
@@ -74,7 +75,7 @@ export class PagethreeComponent {
      ];
   
      textForInfoboxes: string[] =[
-      'Für den Video-Kurs einfach hier (https://ullrichtobias.gurucan.com/) mit E-Mail & Passwort registrieren und bequem per PayPal bezahlen.' +
+      'Für die Video-Kurse einfach hier (https://ullrichtobias.gurucan.com/) mit E-Mail & Passwort registrieren und bequem per PayPal bezahlen.' +
       'Bei Fragen & Anregungen zu den Kursen meldet euch gerne bei mir.' +
       ' Herzliche Grüße' +
       ' Tobias Ullrich',

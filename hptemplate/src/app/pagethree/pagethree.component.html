@@ -29,7 +29,7 @@
                 <b>• Inhalt: </b>{{ courseContent[i] }} <br>
                 <b>• Dauer: </b> {{ courseTime[i] }} <br>
                 <b>• Preis: </b> {{ coursePrice[i] }} <br>
-                <b style="color:red">• Special: </b> <span style="color:darkgreen">{{ courseSpecial[i] }}</span>
+                <b style="color:red">• Info: </b> <span style="color:darkgreen">{{ courseSpecial[i] }}</span>
               </span>
              </div>
             
@@ -78,8 +78,9 @@
 
 
 
-<div class="lastContainerOfPage">
+<div class="lastContainerOfPage buttons">
   <app-custombutton (click)="routeTo('/Kontakt')" [buttonText]="label"></app-custombutton>
+  <app-custombutton (click)="goToUrl('https://ullrichtobias.gurucan.com/')" [buttonText]="label5" class="loginbutton"></app-custombutton>
 </div>
 
 
