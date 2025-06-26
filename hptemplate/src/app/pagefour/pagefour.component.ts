@@ -16,7 +16,10 @@ export class PagefourComponent {
     'https://www.symbolwelten.de/',
     'https://physiotherapie-marchadier.de/',
     'https://www.dhamma.org/',
-    'https://www.ulrichbold.com/'
+    'https://www.ulrichbold.com/',
+    'https://www.academyofsports.de/',
+    'https://heilpraktiker-drechsler.de/',
+    'https://intu-healing.de/'
    ]; 
 
   goToUrl(id: number){
