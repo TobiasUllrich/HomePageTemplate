@@ -13,7 +13,7 @@ export class NavmenuComponent {
     '/Kurse',
     '/',
     '/UeberMich',
-    '/Astrologie/Horoskope',
+    '/Angebote',
     '/Kontakt',
    ];
 
@@ -23,7 +23,7 @@ export class NavmenuComponent {
     'Kurse',
     '',
     'Über Mich',
-    'Meine Arbeit',
+    'Angebote',
     'Kontakt',
    ];
 
@@ -35,7 +35,7 @@ export class NavmenuComponent {
     '/Kurse/Kursinhalte',
     '',
     '',
-    '/Astrologie/Horoskope',
+    '', //'/Astrologie/Horoskope',
     '',
    ];
 
@@ -45,7 +45,7 @@ export class NavmenuComponent {
     'Kursinhalte',
     '',
     '',
-    'Horoskope',
+    '',  //'Horoskope',
     '',
    ];
 
@@ -55,7 +55,7 @@ export class NavmenuComponent {
     '',
     '',
     '',
-    '/Cranio-Sacral/Diplomarbeit',
+    '', //'/Cranio-Sacral/Diplomarbeit',
     '',
    ];
 
@@ -65,7 +65,7 @@ export class NavmenuComponent {
     '',
     '',
     '',
-    'Diplomarbeit',
+    '', //'Diplomarbeit',
     '',
    ];
 
@@ -75,7 +75,7 @@ export class NavmenuComponent {
     '',
     '',
     '',
-    '/Kurse/Kursinhalte',
+    '', //'/Kurse/Kursinhalte',
     '',
    ];
 
@@ -85,7 +85,7 @@ export class NavmenuComponent {
     '',
     '',
     '',
-    'Kursinhalte',
+    '', //'Kursinhalte',
     '',
    ];
 

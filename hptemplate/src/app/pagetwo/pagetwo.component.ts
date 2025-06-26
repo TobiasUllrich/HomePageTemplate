@@ -14,8 +14,7 @@ export class PagetwoComponent {
     /**
      * Labels for the customized Button
      */
-    label = 'Kontaktiere mich';
-
+    label = 'Angebote';
     /**
      * 
      * @param route Internal Route to another Page

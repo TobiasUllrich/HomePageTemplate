@@ -18,15 +18,15 @@ export class StartpageComponent {
    ];
 
   caption: string[] =[
-    'Tobias Ullrich: Evolutionärer Astrologe & Cranio-Sacral-Therapeut',
-    'Evolutionäre Astrologie: Kurse',
-    'Biodynamische Cranio-Sacral-Therapie',
-    'Evolutionäre Astrologie: Beratung'
+    'Tobias Ullrich: Evolutionärer Astrologe & Cranio-Sacral-Therapeut 🌀',
+    'Evolutionäre Astrologie: Kurse 📖',
+    'Biodynamische Cranio-Sacral-Therapie 🌊',
+    'Evolutionäre Astrologie: Beratung ⭐'
    ];
 
    text: string[] =[
-    '"Jeder Mensch kommt mit einem speziellen Schicksal auf diese Welt.' +
-    'Er hat etwas zu vollbringen, eine Nachricht zu vermitteln, eine Arbeit fertigzustellen. Du bist nicht zufällig hier, dein Hiersein hat einen Sinn.' +
+    '"Jeder Mensch kommt mit einem speziellen Schicksal auf diese Welt. ' +
+    'Er hat etwas zu vollbringen, eine Nachricht zu vermitteln, eine Arbeit fertigzustellen. Du bist nicht zufällig hier, dein Hiersein hat einen Sinn. ' +
     'Das Ganze will durch dich etwas schaffen."' +
     '- Osho',
     '"Das Entscheidende am Wissen ist, dass man es beherzigt und anwendet." - Konfuzius',
@@ -36,9 +36,9 @@ export class StartpageComponent {
 
    routes: string[] =[ 
     '/UeberMich',
-    '/Kurse',
-    '/Cranio-Sacral',
-    '/Astrologie',
+    '/Angebote',          //'/Kurse',
+    '/Angebote', //'/Cranio-Sacral',
+    '/Angebote',   //'/Astrologie',
    ];
 
 
@@ -48,8 +48,8 @@ export class StartpageComponent {
    ];
 
    captionForInfoboxes: string[] =[
-    'Folge mir auf YouTube',
-    'Information',
+    'Folge mir auf YouTube 🚀',
+    'Information ☝️',
    ];
 
    textForInfoboxes: string[] =[
@@ -67,6 +67,7 @@ export class StartpageComponent {
      * Labels for the customized Button
      */
     label = 'Mehr';
+    label2 = 'Angebote';
 
     /**
      * 

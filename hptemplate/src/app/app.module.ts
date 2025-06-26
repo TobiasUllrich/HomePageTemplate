@@ -21,6 +21,7 @@ import { ContactboxComponent } from './contactbox/contactbox.component';
 import { CustombuttonComponent } from './custombutton/custombutton.component';
 import { VideobackgroundComponent } from './videobackground/videobackground.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
+import { PageeightComponent } from './pageeight/pageeight.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MapboxComponent } from './mapbox/mapbox.component';
     CustombuttonComponent,
     VideobackgroundComponent,
     MapboxComponent,
+    PageeightComponent,
   ],
   imports: [
     BrowserModule,

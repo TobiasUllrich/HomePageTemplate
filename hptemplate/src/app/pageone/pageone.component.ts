@@ -14,7 +14,7 @@ export class PageoneComponent {
     /**
      * Labels for the customized Button
      */
-    label = 'Kontaktiere mich';
+    label = 'Angebote';
 
     /**
      * 

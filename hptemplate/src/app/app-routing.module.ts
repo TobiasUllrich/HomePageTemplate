@@ -10,6 +10,7 @@ import { PagefourComponent } from './pagefour/pagefour.component';
 import { PagefiveComponent } from './pagefive/pagefive.component';
 import { PagesixComponent } from './pagesix/pagesix.component';
 import { PagesevenComponent } from './pageseven/pageseven.component';
+import { PageeightComponent } from './pageeight/pageeight.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
 { path: 'Astrologie', component: PageoneComponent },
 { path: 'Cranio-Sacral', component: PagetwoComponent},
 { path: 'Kurse', component: PagethreeComponent },
+{ path: 'Angebote', component: PageeightComponent },
 
 { path: 'Astrologie/Horoskope', component: PagefiveComponent },
 { path: 'Cranio-Sacral/Diplomarbeit', component: PagesixComponent },
