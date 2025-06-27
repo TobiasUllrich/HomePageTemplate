@@ -30,8 +30,8 @@ export class PagesevenComponent {
    ];
 
    courseName: string[] =[
-    'Evolutionäre Astrologie I',
-    'Evolutionäre Astrologie II',
+    '🌟 Evolutionäre Astrologie I',
+    '🌟 Evolutionäre Astrologie II',
     '1. Evolutionäre Astrologie',
     '2. Planeten unseres Sonnensystems',
     '3. Astronomische Grundlagen',

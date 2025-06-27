@@ -21,10 +21,9 @@ export class PagethreeComponent {
     label5 = 'Login';
 
 
-
     courseName: string[] =[
-      'Evolutionäre Astrologie I',
-      'Evolutionäre Astrologie II',
+      '🌟 Evolutionäre Astrologie I',
+      '🌟 Evolutionäre Astrologie II',
     ]
 
     courseImgs: string[] =[
@@ -71,7 +70,7 @@ export class PagethreeComponent {
      ];
   
      captionForInfoboxes: string[] =[
-      'Information',
+      'Information ☝️',
      ];
   
      textForInfoboxes: string[] =[
