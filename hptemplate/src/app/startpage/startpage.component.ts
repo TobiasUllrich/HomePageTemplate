@@ -18,9 +18,9 @@ export class StartpageComponent {
    ];
 
   caption: string[] =[
-    'Tobias Ullrich: Evolutionärer Astrologe & Cranio-Sacral-Therapeut 🌀',
+    'Astrologe & Cranio-Sacral-Balancer 🌀',
     'Evolutionäre Astrologie: Kurse 📖',
-    'Biodynamische Cranio-Sacral-Therapie 🌊',
+    'Cranio-Sacral-Balancing 🌊',
     'Evolutionäre Astrologie: Beratung ⭐'
    ];
 
@@ -54,7 +54,7 @@ export class StartpageComponent {
 
    textForInfoboxes: string[] =[
     'Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!',
-    'Mit der Biodynamischen Cranio-Sacral-Therapie stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
+    'Mit dem Cranio-Sacral-Balancing & der Wirbelsäulen-Ausrichtung stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
    ];
 
    routeForInfoboxes: string[] =[

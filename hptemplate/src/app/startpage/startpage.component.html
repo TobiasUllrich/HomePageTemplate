@@ -8,7 +8,7 @@
            <div *ngIf="i == 0" class="containerDesign forContainerWithProfilePic">
              <img id="{{'myimage' + i}}" src="assets/img/{{ picture }}" class="picSize">
              <div class="flexboxAndflexdirectioncolumn">
-               <h2 class="mrgZero">{{ caption[i] }}</h2>
+               <h2 class="mrgZero">Tobias Ullrich: <br>{{ caption[i] }}</h2>  <!--<pre class="umbruch">{{ caption[i] }}</pre>-->
                <span>{{ text[i] }}</span>
                <app-custombutton routerLink="{{ routes[i] }}" [buttonText]="label" class="buttonSizing"></app-custombutton>
              </div>

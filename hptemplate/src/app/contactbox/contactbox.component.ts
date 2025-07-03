@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { environment } from '../../environments/environment'; //environment.development (localhost) ODER environment angeben (domain)
+import { NavigationStart, Router } from '@angular/router';
 
 
 @Component({
@@ -13,14 +14,20 @@ export class ContactboxComponent implements OnInit{
     @ViewChild('emailField') emailField!: ElementRef; //To contact #nameField of the HTML-Code
     @ViewChild('messageField') messageField!: ElementRef; //To contact #messageField of the HTML-Code
     @ViewChild('sendbutton') sendbutton!: ElementRef; //To contact #sendbutton of the HTML-Code
-    constructor() { }
-  
 
+    constructor(private router: Router) {};
 
+    /**
+     * Scrolls to the top, when page is loaded
+     */  
+     ngOnInit() {
+       this.router.events.subscribe(event => {
+         if (event instanceof NavigationStart) {
+           window.scrollTo(0, 0); // Scrollt zum Anfang der Seite
+         }
+       });
+     }
 
-    ngOnInit(): void {
-    }
-  
     /**
      * We are making a POST-Request, means we are sending data to the FTP-Server and using the PHP-Script of the FTP-Server
      */
