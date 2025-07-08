@@ -18,9 +18,9 @@ export class StartpageComponent {
    ];
 
   caption: string[] =[
-    'Astrologe & Cranio-Sacral-Balancer 🌀',
+    'Astrologe & Heiler 🌀',
     'Evolutionäre Astrologie: Kurse 📖',
-    'Cranio-Sacral-Balancing 🌊',
+    'Cranio-Sacral-Behandlung 🌊',
     'Evolutionäre Astrologie: Beratung ⭐'
    ];
 
@@ -54,7 +54,7 @@ export class StartpageComponent {
 
    textForInfoboxes: string[] =[
     'Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!',
-    'Mit dem Cranio-Sacral-Balancing & der Wirbelsäulen-Ausrichtung stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
+    'Mit der Cranio-Sacral-Behandlung stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
    ];
 
    routeForInfoboxes: string[] =[
