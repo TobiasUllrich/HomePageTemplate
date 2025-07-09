@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PageeightComponent {
 
-  constructor(private router: Router, private titleService:Title) { this.titleService.setTitle("Angebote"); } 
+  constructor(private router: Router, private titleService:Title) { this.titleService.setTitle("Tobias Ullrich | Angebote"); } 
 
     /**
      * Labels for the customized Button

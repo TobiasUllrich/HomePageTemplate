@@ -15,11 +15,19 @@
     margin-top:50px;
 }
 
+.picBox{
+    width:100%;
+}
+
 @media (min-width:401px) and (max-width:500px) {
 
 .buttons{
   flex-direction: column;
   align-items: center;
+}
+
+.buttonmrg{
+  margin-bottom:25px;
 }
 
 }

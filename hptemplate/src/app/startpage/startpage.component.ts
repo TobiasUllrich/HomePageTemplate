@@ -53,7 +53,7 @@ export class StartpageComponent {
    ];
 
    textForInfoboxes: string[] =[
-    'Der einzige & größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!',
+    'Der größte YouTube-Kanal zum Thema Evolutionäre Astrologie. Dort findest du eine systematische Einführung in die Evolutionäre Astrologie!',
     'Mit der Cranio-Sacral-Behandlung stärke ich Menschen in ihrer Vitalität & Widerstandsfähigkeit und ersetze keinen Arzt oder Heilpraktiker!',
    ];
 
